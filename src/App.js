@@ -22,6 +22,7 @@ import Crop from './components/pages/Crop';
 import About from './components/pages/About';
 import Mandi from './components/pages/Mandi'
 import Rabi from './components/pages/Rabi';
+import Khareef from './components/pages/Khareef';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/schemes" component={Schemes} />
         <Route exact path="/contactus" component={Contact} />
         <Route exact path="/Rabi" component={Rabi} /> 
+        <Route exact path="/Khareef" component={Khareef} /> 
         <Route component={NotFound} /> 
       </Switch>
       <Footer/>

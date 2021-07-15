@@ -73,7 +73,7 @@ const Navbar = () => {
           <Dropdown.Item href="./Rabi">
             Rabi
           </Dropdown.Item>
-          <Dropdown.Item href="./crops">
+          <Dropdown.Item href="./Khareef">
             Khareef
           </Dropdown.Item>
         </Dropdown.Menu>
