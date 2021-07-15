@@ -9,7 +9,9 @@ const Home=()=>{
 <section id="education">
 
     <div id="about-para">
+      
       <h1 style={{marginLeft:'78%'}}>Agriculture</h1>
+      
       <p  style={{ background:'  	#D3D3D3' ,textAlign:'Justify', textIndent:'2px'}}>Agriculture is the science, art and practice of cultivating plants
    and livestock.Agriculture was the key development in the rise of sedentary human 
    civilization, whereby farming of domesticated species created food surpluses that

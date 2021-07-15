@@ -28,7 +28,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" style={{color:'white'}} exact to="/Helplines">
+              <NavLink className="nav-link" style={{color:'white'}} exact to="/help">
                 HelpLines
               </NavLink>
             </li>
@@ -39,7 +39,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" style={{color:'white'}} exact to="/importantAddress">
+              <NavLink className="nav-link" style={{color:'white'}} exact to="/Impd">
               ImportantAddress
               </NavLink>
             </li>

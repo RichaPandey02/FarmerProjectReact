@@ -1,32 +1,61 @@
-import React , {useState,useEffect}from "react";
-
-import Pagination from "../layout/Pagination";
-import axios from 'axios';
+import React from "react";
+import { AgGridReact } from "ag-grid-react";
+import "ag-grid-community/dist/styles/ag-grid.css";
+import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+// import Pagination from "../layout/Pagination";
+// import axios from 'axios';
 import Carousel from "../layout/Carousel";
 
 const Helplines = () => {
-  const[users,setUser]=useState([]);
-  useEffect(()=>{
+  // const[users,setUser]=useState([]);
+  // useEffect(()=>{
 
-      loadUsers();
-  },[]);
-  const [showPerPage,setShowPerPage]=useState(8);
-  const [pagination, setPagination] = useState({
-    start:0,
-    end:showPerPage
-  });
-  const onPaginationChange=(start,end)=>{
-    setPagination({start:start,end:end})
+  //     loadUsers();
+  // },[]);
+  // const [showPerPage,setShowPerPage]=useState(8);
+  // const [pagination, setPagination] = useState({
+  //   start:0,
+  //   end:showPerPage
+  // });
+  // const onPaginationChange=(start,end)=>{
+  //   setPagination({start:start,end:end})
 
-  }
+  // }
  
 
-  const loadUsers=async ()=>{
-      const result=await axios.get("http://localhost:3000/api/HelplineSchema");
-      setUser(result.data)
-      console.log(result)
-  }
-  
+  // const loadUsers=async ()=>{
+  //     const result=await axios.get("http://localhost:3000/api/HelplineSchema");
+  //     setUser(result.data)
+  //     console.log(result)
+  // }
+  const onGridReady = (params) => {
+    console.log("grid is ready");
+    fetch("http://localhost:3000/api/HelplineSchema")
+      .then((resp) => resp.json())
+      .then((resp) => params.api.applyTransaction({ add: resp }));
+  };
+  const columns = [
+    {
+      headerName: "title",
+      field: "title",
+      sortable: true,
+      editable: true,
+      filter: true,
+      checkboxSelection: true,
+      floatingFilter: true,
+      flex:1
+    },
+    {
+      headerName: "details",
+      field: "details",
+      sortable: true,
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+    },
+    
+  ];
+
   return (
     
     <div>
@@ -44,31 +73,24 @@ const Helplines = () => {
              information related to their problems and agriculture by calling.
 
              </p>
-             <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Details</th>
-      <th scope="col">Title</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-  {users.slice(pagination.start,pagination.end).map((users, index) => (
-                <tr>
-                  <th scope="row">{index + 1}</th>
-                  {/* <td>{users.id}</td> */}
-                  <td>{users.title}</td>
-                  <td>{users.details}</td>
-
-                 
-                </tr>
-              ))}
-  </tbody>
-</table>
+             
            
     </div>
-    <Pagination showPerPage={showPerPage} onPaginationChange={onPaginationChange}/>
+    <div
+        className="ag-theme-alpine"
+        style={{
+          height: "500px",
+          width: "1500px",
+        }}
+      >
+        <AgGridReact
+          columnDefs={columns}
+          onGridReady={onGridReady}
+          pagination={true}
+          paginationPageSize={10}
+          paginationAutoPageSize={true}
+        />
+      </div>
     </div>
     
   );

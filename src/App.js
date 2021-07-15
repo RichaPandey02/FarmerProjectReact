@@ -9,20 +9,20 @@ import {
   Switch,
   
 } from "react-router-dom";
-import Helplines from './components/pages/Helplines';
+
 import Footer from './components/layout/Footer';
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import Home from './components/pages/Home';
-import ImportantAddress from './components/pages/Mandi';
+import Impd from './components/pages/Impd'
 import Schemes from './components/pages/Schemes';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import Crop from './components/pages/Crop';
 import About from './components/pages/About';
 import Mandi from './components/pages/Mandi'
 import Rabi from './components/pages/Rabi';
 import Khareef from './components/pages/Khareef';
+import Helplines from './components/pages/Helplines'
 
 
 function App() {
@@ -34,8 +34,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/mandi" component={Mandi} /> 
-         <Route exact path="/importantAddress" component={ImportantAddress} />  
-        <Route exact path="/Helplines" component={Helplines} />
+        <Route exact path="/Impd" component={Impd} /> 
+        <Route exact path="/help" component={Helplines} /> 
+          
+        
         <Route exact path="/home" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Register} />

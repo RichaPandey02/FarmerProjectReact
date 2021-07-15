@@ -1,11 +1,12 @@
 import React from "react";
+
+// import axios from 'axios';
+// import Pagination from "../layout/Pagination";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-// import axios from 'axios';
-// import Pagination from "../layout/Pagination";
 import Carousel from "../layout/Carousel";
-const Mandi = () => {
+const ImportantAddress = () => {
   // const[users,setUser]=useState([]);
   // useEffect(()=>{
 
@@ -21,16 +22,17 @@ const Mandi = () => {
 
   // }
   // const loadUsers=async ()=>{
-  //     const result=await axios.get("http://localhost:3000/api/mandischema");
+  //     const result=await axios.get("http://localhost:3000/api/SoilSchema");
   //     setUser(result.data)
   //     console.log(result)
   // }
   const onGridReady = (params) => {
     console.log("grid is ready");
-    fetch("http://localhost:3000/api/mandischema")
+    fetch("http://localhost:3000/api/SoilSchema")
       .then((resp) => resp.json())
       .then((resp) => params.api.applyTransaction({ add: resp }));
   };
+
   const columns = [
     {
       headerName: "STATE",
@@ -43,40 +45,64 @@ const Mandi = () => {
       flex:1
     },
     {
-      headerName: "DIST",
-      field: "DIST",
+      headerName: "dist",
+      field: "dist",
       sortable: true,
       editable: true,
       filter: true,
       floatingFilter: true,
     },
     {
-      headerName: "MARKET",
-      field: "MARKET",
+      headerName: "Office_Address",
+      field: "Office_Address",
       sortable: true,
       editable: true,
       filter: true,
       floatingFilter: true,
     },
     {
-      headerName: "GODOWN",
-      field: "GODOWN",
+      headerName: "No_of_Staff",
+      field: "No_of_Staff",
       sortable: true,
       editable: true,
       filter: true,
       floatingFilter: true,
     },
     {
-      headerName: "COLDSTORAGE",
-      field: "COLDSTORAGE",
+      headerName: "TelePhone",
+      field: "TelePhone",
       sortable: true,
       editable: true,
       filter: true,
       floatingFilter: true,
     },
     {
-      headerName: "RAILWAY",
-      field: "RAILWAY",
+      headerName: "Soil_Equipment",
+      field: "Soil_Equipment",
+      sortable: true,
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+    },
+    {
+      headerName: "Soil_Test_No",
+      field: "Soil_Test_No",
+      sortable: true,
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+    },
+    {
+      headerName: "Fax",
+      field: "Fax",
+      sortable: true,
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+    },
+    {
+      headerName: "other_Information",
+      field: "other_Information",
       sortable: true,
       editable: true,
       filter: true,
@@ -89,27 +115,26 @@ const Mandi = () => {
     <div >
       
       <Carousel/>
-      <h1 style={{textAlign:'center'}}> CURRENTLY AVAILABLE MANDI'S</h1>
-          
-          <div
-          className="ag-theme-alpine"
-          style={{
-            height: "500px",
-            width: "1500px",
-          }}
-        >
-          <AgGridReact
-            columnDefs={columns}
-            onGridReady={onGridReady}
-            pagination={true}
-            paginationPageSize={10}
-            paginationAutoPageSize={true}
-          />
-        </div>
-        </div>
+      <div
+        className="ag-theme-alpine"
+        style={{
+          height: "500px",
+          width: "1500px",
+        }}
+      >
+        <AgGridReact
+          columnDefs={columns}
+          onGridReady={onGridReady}
+          pagination={true}
+          paginationPageSize={10}
+          paginationAutoPageSize={true}
+        />
+      </div>
+     
+    </div>
 
     
   );
 };
 
-export default Mandi;
+export default ImportantAddress;
