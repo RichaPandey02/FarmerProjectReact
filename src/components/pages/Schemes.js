@@ -31,35 +31,38 @@ const Schemes = () => {
     {
       headerName: "title",
       field: "title",
-      sortable: true,
-      editable: true,
-      filter: true,
+      // sortable: true,
+       editable: true,
+      // filter: true,
       checkboxSelection: true,
-      floatingFilter: true,
+      // floatingFilter: true,
     },
     {
       headerName: "State",
       field: "State",
-      sortable: true,
-      editable: true,
+      // sortable: true,
+       editable: true,
       filter: true,
       floatingFilter: true,
+      
     },
     {
       headerName: "Website",
-      field: "Website",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
+      // field: "Website",
+      // sortable: true,
+       editable: true,
+      // filter: true,
+      // floatingFilter: true,
+      
     },
     {
       headerName: "Description",
       field: "Description",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
+      // sortable: true,
+       editable: true,
+      // filter: true,
+      // floatingFilter: true,
+      
     },
   ];
 
