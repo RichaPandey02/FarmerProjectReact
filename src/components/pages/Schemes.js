@@ -38,6 +38,15 @@ const Schemes = () => {
        editable: true,
 
     },
+    {
+      headerName:"Action",
+      cellRendererFramework:(params)=>
+      <div>
+        <button onClick={()=>cellDeleteing(params)}>Delete
+      
+      </button>
+      </div>
+    }
     
   ];
   let id;
@@ -48,12 +57,17 @@ const Schemes = () => {
   };
 
   const cellEditing = (resp) => {
+    id = resp.data._id;
     
-    
-    axios.put(`http://localhost:3000/api/${id}`, resp.data);
+    axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
     console.log(resp);
     alert("your data has been updated")
   };
+  const cellDeleteing=(resp)=>{
+    id = resp.data._id;
+    axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data)
+    alert("your data has been deleted")
+  }
   return (
     <div>
       <Carousel />
@@ -98,6 +112,7 @@ const Schemes = () => {
           paginationAutoPageSize={true}
           onRowDoubleClicked={UpadateFunction}
           onCellEditingStopped={cellEditing}
+          
         />
      
       </div>
