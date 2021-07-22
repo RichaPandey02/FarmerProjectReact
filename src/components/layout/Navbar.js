@@ -89,11 +89,11 @@ const Navbar = () => {
                 Login
               </NavLink>
             </li> */}
-            <li className="nav-item" >
+            {/* <li className="nav-item" >
               <NavLink className="nav-link"  style={{color:'white', marginLeft:'500%'}} exact to="/signup">
                 Signup
               </NavLink>
-            </li>
+            </li> */}
             {/* <li className="nav-item" >
               <NavLink className="nav-link"  style={{color:'white', marginLeft:'650%'}} exact to="/about">
                 About

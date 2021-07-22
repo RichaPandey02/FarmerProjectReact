@@ -7,7 +7,7 @@ const About = () => {
       <Carousel />
       <div className="wrapper">
         <div>
-        <i class="material-icons brand-icon" style={{fontSize:'100px'}}>agriculture</i> 
+        <i className="material-icons brand-icon" data-testid="testcase" style={{fontSize:'100px'}}>agriculture</i> 
           <h1>Agriculture</h1>
           <p>
             Agriculture is the science, art and practice of cultivating plants
@@ -39,7 +39,7 @@ const About = () => {
           <img src="https://image.shutterstock.com/image-photo/kolkata-india-march-18-2017-600w-611691938.jpg"  style={{height:300,width:420}}/>
         </div>
         <div>
-        <i class="material-icons brand-icon" style={{fontSize:'100px'}}>history_toggle_off</i> 
+        <i className="material-icons brand-icon" style={{fontSize:'100px'}}>history_toggle_off</i> 
           <h1>History</h1>
           <p>
             The development of agriculture enabled the human population to grow
@@ -76,7 +76,7 @@ const About = () => {
           </p>
         </div>
         <div>
-        <i class="material-icons brand-icon" style={{fontSize:'100px'}}>people_alt</i> 
+        <i className="material-icons brand-icon" style={{fontSize:'100px'}}>people_alt</i> 
           <h1>WorkForce</h1>
           <p>
             Agriculture is the science, art and practice of cultivating plants
