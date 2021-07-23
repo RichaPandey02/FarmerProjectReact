@@ -118,7 +118,7 @@ const Mandi = () => {
     <div >
       
       <Carousel/>
-      <h1 style={{textAlign:'center'}}> CURRENTLY AVAILABLE MANDI'S</h1>
+      <h1 style={{textAlign:'center' ,color:'#eb2f06'}}> CURRENTLY AVAILABLE MANDI'S</h1>
           
           <div
           className="ag-theme-alpine"

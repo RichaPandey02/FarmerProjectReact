@@ -57,6 +57,7 @@ const Schemes = () => {
     
     console.log(resp);
     id = resp.data._id;
+    alert("Do you want to update tour data?🙄🙄")
   };
 
   const cellEditing = (resp) => {
@@ -65,7 +66,7 @@ const Schemes = () => {
     
     axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
     console.log(resp);
-    alert("your data has been updated")
+    alert("your data has been updated 🙂☺ ")
   };
   const cellDeleteing=(resp)=>{
     id = resp.data._id;
@@ -84,10 +85,10 @@ const Schemes = () => {
       <Carousel />
       
       <section>
-        <h1 style={{ textAlign: "center" }}>
+        <h1 style={{ textAlign: "center" ,color:'#eb2f06'}}>
           SCHEMES AVAILABLE FOR MARKET PRICE
         </h1>
-        <p style={{ textAlign: "justify", color: "gray", margin: "5px" }}>
+        <h6 style={{ textAlign: "justify", color: "#eb2f06", margin: "5px" }}>
           Minimum Support Price (MSP) is a form of market intervention by the
           Government of India to insure agricultural producers against any sharp
           fall in farm prices. The minimum support prices are announced by the
@@ -103,7 +104,7 @@ const Schemes = () => {
           bumper production and glut in the market, government agencies purchase
           the entire quantity offered by the farmers at the announced minimum
           price.
-        </p>
+        </h6>
       </section>
       <button onClick={()=>onExportClick()} style={{marginLeft:'95%'}}>export</button>
       <div

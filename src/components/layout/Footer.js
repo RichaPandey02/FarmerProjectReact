@@ -2,7 +2,8 @@ import React from 'react'
 import '../layout/Footer.css'
 const Footer=()=>{
     return(
-    <div>
+    
+    <div className="resize">
 
 <section id="contact" style={{resize:"both"}} >
     <h1 className="section-heading mb50px">

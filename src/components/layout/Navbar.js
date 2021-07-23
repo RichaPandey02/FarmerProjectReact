@@ -22,7 +22,7 @@ const Navbar = () => {
 
         
         
-            <li className="nav-item">
+            <li className="nav-item richa" >
               <NavLink className="nav-link" style={{color:'white'}} exact to="/">
                 Home
               </NavLink>

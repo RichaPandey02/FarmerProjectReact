@@ -105,7 +105,8 @@ const About = () => {
             cause decrease in crop yield.Genetically modified organisms are
             widely used, although some are banned in certain countries.
           </p>
-          <img src="https://image.shutterstock.com/image-vector/stock-vector-silhouette-farmer-plowing-600w-1285562311.jpg"  style={{height:300,width:420}}/>
+          <img src="https://image.shutterstock.com/image-vector/stock-vector-silhouette-farmer-plowing-600w-1285562311.jpg"  style={{height:300,width:200}}/>
+          <img src="https://image.shutterstock.com/image-vector/stock-vector-silhouette-farmer-plowing-600w-1285562311.jpg"  style={{height:300,width:200}}/>
         </div>
       </div>
     </div>
