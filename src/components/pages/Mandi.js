@@ -2,7 +2,7 @@ import React from "react";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-// import axios from 'axios';
+ import axios from 'axios';
 // import Pagination from "../layout/Pagination";
 import Carousel from "../layout/Carousel";
 const Mandi = () => {
@@ -82,8 +82,37 @@ const Mandi = () => {
       filter: true,
       floatingFilter: true,
     },
+    {
+      headerName:"Action",
+      cellRendererFramework:(params)=>
+      <div>
+        <button onClick={()=>cellDeleteing(params)}>Delete</button>
+        {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+      
+      </div>
+    }
     
   ];
+  let id;
+  const UpadateFunction = (resp) => {
+    
+    console.log(resp);
+    id = resp.data._id;
+  };
+
+  const cellEditing = (resp) => {
+    
+    id = resp.data._id;
+    
+    axios.put(`http://localhost:3000/api/mandi/${id}`, resp.data);
+    console.log(resp);
+    alert("your data has been updated")
+  };
+  const cellDeleteing=(resp)=>{
+    id = resp.data._id;
+    axios.delete(`http://localhost:3000/api/mandi/${id}`, resp.data)
+    alert("your data has been deleted")
+  }
 
   return (
     <div >
@@ -104,6 +133,8 @@ const Mandi = () => {
             pagination={true}
             paginationPageSize={10}
             paginationAutoPageSize={true}
+            onRowDoubleClicked={UpadateFunction}
+            onCellEditingStopped={cellEditing}
           />
         </div>
         </div>

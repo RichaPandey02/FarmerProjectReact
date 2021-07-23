@@ -1,24 +1,27 @@
 import React from "react";
-import axios from "axios";
+ import axios from "axios";
 import Carousel from "../layout/Carousel";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
 const Schemes = () => {
-  
+  let gridApi;
   const onGridReady = (params) => {
     
     fetch("http://localhost:3000/api/schemeSchema")
       .then((resp) => resp.json())
       .then((resp) => params.api.applyTransaction({ add: resp }));
+
+
+      gridApi=params.api
   };
   const columns = [
     {
       headerName: "title",
       field: "title",
       editable: true,
-      checkboxSelection: true,
+      // checkboxSelection: true,
     },
     {
       headerName: "State",
@@ -42,9 +45,9 @@ const Schemes = () => {
       headerName:"Action",
       cellRendererFramework:(params)=>
       <div>
-        <button onClick={()=>cellDeleteing(params)}>Delete
+        <button onClick={()=>cellDeleteing(params)}>Delete</button>
+        {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
       
-      </button>
       </div>
     }
     
@@ -57,6 +60,7 @@ const Schemes = () => {
   };
 
   const cellEditing = (resp) => {
+    
     id = resp.data._id;
     
     axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
@@ -68,9 +72,17 @@ const Schemes = () => {
     axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data)
     alert("your data has been deleted")
   }
+  
+    const onExportClick=()=>{
+        gridApi.exportDataAsCsv();
+    }
+
   return (
     <div>
+         
+    <div>
       <Carousel />
+      
       <section>
         <h1 style={{ textAlign: "center" }}>
           SCHEMES AVAILABLE FOR MARKET PRICE
@@ -93,7 +105,7 @@ const Schemes = () => {
           price.
         </p>
       </section>
-
+      <button onClick={()=>onExportClick()} style={{marginLeft:'95%'}}>export</button>
       <div
       
         className="ag-theme-alpine"
@@ -112,11 +124,15 @@ const Schemes = () => {
           paginationAutoPageSize={true}
           onRowDoubleClicked={UpadateFunction}
           onCellEditingStopped={cellEditing}
+        
+          // onRowValueChanged={cellEditing}
+          // onGridReady={onGridReady1}
           
         />
      
       </div>
     </div>
+     </div>
   );
 };
 
@@ -242,6 +258,9 @@ export default Schemes;
 //       rowNodes: [params.node],
 //       force: true
 //     });
+
+
+    
 //   }
 //   onRowEditingStopped(params) {
 //     params.api.refreshCells({
@@ -250,6 +269,12 @@ export default Schemes;
 //       force: true,
 //     }
 //     );
+    
+   
+
+    
+
+
 
 
     
