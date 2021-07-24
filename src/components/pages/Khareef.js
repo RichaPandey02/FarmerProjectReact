@@ -5,8 +5,8 @@ const Khareef = () => {
     <div>
       <Carousel />
       <div>
-        <h1>Khareef</h1>
-        <p>
+        <h1 style={{color:'#ff4757',textAlign:'center'}}>Khareef CROPS</h1>
+        <h6>
           Kharif Crops: (crops means: when a similar plant grown on fields) that
           are sown in the rainy season from June to September are characterized
           as Kharif Crops. Groundnut, Paddy (rice), Maize all need more water to
@@ -23,7 +23,7 @@ const Khareef = () => {
           crops, feed crops, industrial crops, oil crops and ornamental crops.
           As per the world's most popular food crops, we can include grains,
           corn, wheat and rice.
-        </p>
+        </h6>
       </div>
       <div className="wrapper">
         <div>

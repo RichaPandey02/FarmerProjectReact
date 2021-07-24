@@ -36,7 +36,7 @@ const Helplines = () => {
   };
   const columns = [
     {
-      headerName: "title",
+      headerName: "TITLE",
       field: "title",
       sortable: true,
       editable: true,
@@ -46,7 +46,7 @@ const Helplines = () => {
       flex:1
     },
     {
-      headerName: "details",
+      headerName: "DETAILS",
       field: "details",
       sortable: true,
       editable: true,
@@ -62,17 +62,17 @@ const Helplines = () => {
       <Carousel/>
       <section></section>
       <div id="about-para">
-        <h1>Wanna help...Please Call Us 😊😊</h1>
+        <h1 style={{color:'#eb2f06'}}>Wanna help...Please Call Us 😊😊</h1>
         
 
 
-          <p>
+          <h5 style={{color:'#2f3542'}}>
             Bharat Sarkar has started a Kisan Call Center for
              the support of the farmers, whose farmers and farmers can avail
              the benefits and information of the services related to the crop seed, by calling the helpline number of the country, these farmers call centers can get all the help in the country. States have started for farmers, on which farmers can get
              information related to their problems and agriculture by calling.
 
-             </p>
+             </h5>
              
            
     </div>

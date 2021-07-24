@@ -41,7 +41,7 @@ const About = () => {
         <div>
         <i className="material-icons brand-icon" style={{fontSize:'100px'}}>history_toggle_off</i> 
           <h1>History</h1>
-          <p>
+          <p data-testid="testcase-1">
             The development of agriculture enabled the human population to grow
             many times larger than could be sustained by hunting and gathering.
             Agriculture began independently in different parts of the globe, and

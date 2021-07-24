@@ -24,21 +24,21 @@ const ImportantAddress = () => {
       flex:1
     },
     {
-      headerName: "dist",
+      headerName: "DIST",
       field: "dist",
     
        editable: true,
       
     },
     {
-      headerName: "Office_Address",
+      headerName: "OFFICE ADDRESS",
       field: "Office_Address",
      
        editable: true,
       
     },
     {
-      headerName: "No_of_Staff",
+      headerName: "NO OF STAFF",
       field: "No_of_Staff",
      
        editable: true,
@@ -46,7 +46,7 @@ const ImportantAddress = () => {
        floatingFilter: true,
     },
     {
-      headerName: "TelePhone",
+      headerName: "TELEPHONE",
       field: "TelePhone",
       // sortable: true,
       editable: true,
@@ -54,7 +54,7 @@ const ImportantAddress = () => {
       // floatingFilter: true,
     },
     {
-      headerName: "Soil_Equipment",
+      headerName: "SOIL EQUIPMENT",
       field: "Soil_Equipment",
       // sortable: true,
        editable: true,
@@ -62,7 +62,7 @@ const ImportantAddress = () => {
       // floatingFilter: true,
     },
     {
-      headerName: "Soil_Test_No",
+      headerName: "SOIL TEST NUMBER",
       field: "Soil_Test_No",
       // sortable: true,
        editable: true,
@@ -70,7 +70,7 @@ const ImportantAddress = () => {
       // floatingFilter: true,
     },
     {
-      headerName: "Fax",
+      headerName: "FAX",
       field: "Fax",
       // sortable: true,
        editable: true,
@@ -78,7 +78,7 @@ const ImportantAddress = () => {
       // floatingFilter: true,
     },
     {
-      headerName: "other_Information",
+      headerName: "OTHER INFORMATION",
       field: "other_Information",
       // sortable: true,
        editable: true,
@@ -86,10 +86,10 @@ const ImportantAddress = () => {
       // floatingFilter: true,
     },
     {
-      headerName:"Action",
+      headerName:"ACTION",
       cellRendererFramework:(params)=>
       <div>
-        <button onClick={()=>cellDeleteing(params)}>Delete</button>
+        <button onClick={()=>cellDeleteing(params)} className="btn btn-danger">Delete</button>
         {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
       
       </div>
@@ -122,6 +122,9 @@ const ImportantAddress = () => {
     <div >
       
       <Carousel/>
+      <h1 style={{textAlign:'center', color:'#eb2f06'}}>
+      SOIL TESTING LABS
+      </h1>
       <div
         className="ag-theme-alpine"
         style={{

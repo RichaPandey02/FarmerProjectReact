@@ -18,34 +18,36 @@ const Schemes = () => {
   };
   const columns = [
     {
-      headerName: "title",
+      headerName: "TITLE",
       field: "title",
       editable: true,
       // checkboxSelection: true,
+      color:'#2C3A47',
+      flex:1
     },
     {
-      headerName: "State",
+      headerName: "STATE",
       field: "State",
       editable: true,
       filter: true,
       floatingFilter: true,
     },
     {
-      headerName: "Website",
+      headerName: "WEBSITE",
       field: "Website",
       editable: true,
     },
     {
-      headerName: "Description",
+      headerName: "DESCRIPTION",
       field: "Description",
        editable: true,
 
     },
     {
-      headerName:"Action",
+      headerName:"ACTION",
       cellRendererFramework:(params)=>
       <div>
-        <button onClick={()=>cellDeleteing(params)}>Delete</button>
+        <button onClick={()=>cellDeleteing(params)} style={{color:'white'}} className="btn btn-danger">Delete</button>
         {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
       
       </div>
@@ -88,7 +90,7 @@ const Schemes = () => {
         <h1 style={{ textAlign: "center" ,color:'#eb2f06'}}>
           SCHEMES AVAILABLE FOR MARKET PRICE
         </h1>
-        <h6 style={{ textAlign: "justify", color: "#eb2f06", margin: "5px" }}>
+        <h5 style={{ textAlign: "justify", color: "#2C3A47", margin: "5px" }}>
           Minimum Support Price (MSP) is a form of market intervention by the
           Government of India to insure agricultural producers against any sharp
           fall in farm prices. The minimum support prices are announced by the
@@ -104,9 +106,9 @@ const Schemes = () => {
           bumper production and glut in the market, government agencies purchase
           the entire quantity offered by the farmers at the announced minimum
           price.
-        </h6>
+        </h5>
       </section>
-      <button onClick={()=>onExportClick()} style={{marginLeft:'95%'}}>export</button>
+      <button onClick={()=>onExportClick()} style={{color:'#eb2f06'}} className="btn btn-success">export</button>
       <div
       
         className="ag-theme-alpine"

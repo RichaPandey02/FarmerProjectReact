@@ -86,7 +86,7 @@ const Mandi = () => {
       headerName:"Action",
       cellRendererFramework:(params)=>
       <div>
-        <button onClick={()=>cellDeleteing(params)}>Delete</button>
+        <button onClick={()=>cellDeleteing(params)} className="btn btn-danger">Delete</button>
         {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
       
       </div>
