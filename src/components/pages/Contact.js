@@ -4,22 +4,59 @@ import axios from 'axios'
 import Carousel from '../layout/Carousel';
 const Contact=()=>{
      let history = useHistory();
-    const [user, setUser] = useState({
-        Fullname: "",
-        Topic: "",
-        Details: "",  
-      
-    });
+    const [user, setUser] = useState({});
+    const [topic,settopic]=useState({});
+    const [details,setdetails]=useState({});
+   
+    const[userErr,setUserErr]=useState(false);
+    const[topicErr,settopicErr]=useState(false);
+    const [detailsErr,setdetailsErr]=useState(false);
+   
     const { Fullname, Topic, Details} = user;
     const onInputChange = e => {
-        setUser({ ...user, [e.target.name]: e.target.value });
+      let item=e.target.value;
+      if(item.length<3)
+      {
+        setUserErr(true)
+      }
+      else{
+        setUserErr(false)
+      }
+        setUser(item);
+        let topics=e.target.value;
+        if(item.length<5)
+        {
+          settopicErr(true)
+        }
+        else{
+          settopicErr(false)
+        }
+          settopic(topics);
+          let detailss=e.target.value;
+          if(detailss.length<10)
+          {
+            setdetailsErr(true)
+          }
+          else{
+            setdetailsErr(false)
+          }
+          setdetails(detailss)
+
       };
       const onSubmit = async e => {
+        if(user.length<3 || topic.length<5||details.length<10)
+        {
+          alert('type correct value')
+        }
+        else{
         e.preventDefault();
         await axios.post("http://localhost:3000/api/contactUs", user);
         history.push("/");
-        alert('you query has been submitted.....')
+       
+       alert('you query has been submitted..... 😊😊')
+        }
       };
+     
       return (
         <div>
 
@@ -37,6 +74,7 @@ const Contact=()=>{
                   value={Fullname}
                   onChange={e => onInputChange(e)}
                 />
+                {userErr?<span style={{color:'red',fontSize:'20px'}}>Please Type correct value...</span>:""}
               </div>
               <div className="form-group">
                 <input
@@ -47,6 +85,7 @@ const Contact=()=>{
                   value={Topic}
                   onChange={e => onInputChange(e)}
                 />
+                 {topicErr?<span style={{color:'red',fontSize:'20px'}}>Please Type corrcet value..</span>:""}
               </div>
               <div className="form-group">
                 <input
@@ -57,6 +96,7 @@ const Contact=()=>{
                   value={Details}
                   onChange={e => onInputChange(e)}
                 />
+                {detailsErr?<span style={{color:'red',fontSize:'20px'}}>Please Type corrcet value..</span>:""}
               </div>
               
               
