@@ -1,4 +1,5 @@
 import React from "react";
+import Help from '../layout/help.css'
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
@@ -34,6 +35,7 @@ const Helplines = () => {
       .then((resp) => resp.json())
       .then((resp) => params.api.applyTransaction({ add: resp }));
   };
+  
   const columns = [
     {
       headerName: "TITLE",
@@ -41,9 +43,9 @@ const Helplines = () => {
       sortable: true,
       editable: true,
       filter: true,
-      checkboxSelection: true,
+      // checkboxSelection: true,
       floatingFilter: true,
-      flex:1
+      flex:'1'
     },
     {
       headerName: "DETAILS",
@@ -54,6 +56,7 @@ const Helplines = () => {
       floatingFilter: true,
     },
     
+    
   ];
 
   return (
@@ -62,6 +65,7 @@ const Helplines = () => {
       <Carousel/>
       <section></section>
       <div id="about-para">
+        <br/>
         <h1 style={{color:'#eb2f06'}}>Wanna help...Please Call Us 😊😊</h1>
         
 
@@ -76,6 +80,7 @@ const Helplines = () => {
              
            
     </div>
+    
     <div
         className="ag-theme-alpine"
         style={{
@@ -83,15 +88,19 @@ const Helplines = () => {
           width: "1500px",
         }}
       >
-        <AgGridReact
+        <AgGridReact 
           columnDefs={columns}
           onGridReady={onGridReady}
           pagination={true}
           paginationPageSize={10}
           paginationAutoPageSize={true}
+          
         />
       </div>
+      <br/>
+      <br/>
     </div>
+    
     
   );
 };

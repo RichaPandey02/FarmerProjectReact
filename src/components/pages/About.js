@@ -1,3 +1,4 @@
+  
 import React from "react";
 import Abt from "../layout/Abt.css";
 import Carousel from "../layout/Carousel";
@@ -8,7 +9,7 @@ const About = () => {
       <div className="wrapper">
         <div>
         <i className="material-icons brand-icon" data-testid="testcase" style={{fontSize:'100px'}}>agriculture</i> 
-          <h1>Agriculture</h1>
+          <h1 style={{color:'#eb2f06'}}>Agriculture</h1>
           <p>
             Agriculture is the science, art and practice of cultivating plants
             and livestock.Agriculture was the key development in the rise of
@@ -40,7 +41,7 @@ const About = () => {
         </div>
         <div>
         <i className="material-icons brand-icon" style={{fontSize:'100px'}}>history_toggle_off</i> 
-          <h1>History</h1>
+          <h1 style={{color:'#eb2f06'}}>History</h1>
           <p data-testid="testcase-1">
             The development of agriculture enabled the human population to grow
             many times larger than could be sustained by hunting and gathering.
@@ -77,7 +78,7 @@ const About = () => {
         </div>
         <div>
         <i className="material-icons brand-icon" style={{fontSize:'100px'}}>people_alt</i> 
-          <h1>WorkForce</h1>
+          <h1 style={{color:'#eb2f06'}}>WorkForce</h1>
           <p>
             Agriculture is the science, art and practice of cultivating plants
             and livestock.Agriculture was the key development in the rise of

@@ -527,3 +527,6 @@ button:focus {
   height: inherit;
   width: 50%;
 }
+.fit{
+  background-color: #1e3799;
+}

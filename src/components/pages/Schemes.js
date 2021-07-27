@@ -1,5 +1,5 @@
 import React from "react";
- import axios from "axios";
+import axios from "axios";
 import Carousel from "../layout/Carousel";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
@@ -8,13 +8,11 @@ import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 const Schemes = () => {
   let gridApi;
   const onGridReady = (params) => {
-    
     fetch("http://localhost:3000/api/schemeSchema")
       .then((resp) => resp.json())
       .then((resp) => params.api.applyTransaction({ add: resp }));
 
-
-      gridApi=params.api
+    gridApi = params.api;
   };
   const columns = [
     {
@@ -22,8 +20,8 @@ const Schemes = () => {
       field: "title",
       editable: true,
       // checkboxSelection: true,
-      color:'#2C3A47',
-      flex:1
+      color: "#2C3A47",
+      flex: 1,
     },
     {
       headerName: "STATE",
@@ -40,113 +38,116 @@ const Schemes = () => {
     {
       headerName: "DESCRIPTION",
       field: "Description",
-       editable: true,
-
+      editable: true,
     },
     {
-      headerName:"ACTION",
-      cellRendererFramework:(params)=>
-      <div>
-        <button onClick={()=>cellDeleteing(params)} style={{color:'white'}} className="btn btn-danger">Delete</button>
-        {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
-      
-      </div>
-    }
-    
+      headerName: "ACTION",
+      cellRendererFramework: (params) => (
+        <div>
+          <button
+            onClick={() => cellDeleteing(params)}
+            style={{ color: "white" }}
+            className="btn btn-danger"
+          >
+            Delete
+          </button>
+          {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+        </div>
+      ),
+    },
   ];
   let id;
   const UpadateFunction = (resp) => {
-    
     console.log(resp);
     id = resp.data._id;
-    alert("Do you want to update tour data?🙄🙄")
+    alert("Do you want to update tour data?🙄🙄");
   };
 
   const cellEditing = (resp) => {
-    
     id = resp.data._id;
-    
+
     axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
     console.log(resp);
-    alert("your data has been updated 🙂☺ ")
+    alert("your data has been updated 🙂☺ ");
   };
-  const cellDeleteing=(resp)=>{
+  const cellDeleteing = (resp) => {
     id = resp.data._id;
-    axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data)
-    alert("your data has been deleted")
-  }
-  
-    const onExportClick=()=>{
-        gridApi.exportDataAsCsv();
-    }
+    axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data);
+    alert("your data has been deleted");
+  };
+
+  const onExportClick = () => {
+    gridApi.exportDataAsCsv();
+  };
 
   return (
     <div>
-         
-    <div>
-      <Carousel />
-      
-      <section>
-        <h1 style={{ textAlign: "center" ,color:'#eb2f06'}}>
-          SCHEMES AVAILABLE FOR MARKET PRICE
-        </h1>
-        <h5 style={{ textAlign: "justify", color: "#2C3A47", margin: "5px" }}>
-          Minimum Support Price (MSP) is a form of market intervention by the
-          Government of India to insure agricultural producers against any sharp
-          fall in farm prices. The minimum support prices are announced by the
-          Government of India at the beginning of the sowing season for certain
-          crops on the basis of the recommendations of the Commission for
-          Agricultural Costs and Prices (CACP). MSP is price fixed by Government
-          of India to protect the producer - farmers - against excessive fall in
-          price during bumper production years. The minimum support prices are a
-          guarantee price for their produce from the Government. The major
-          objectives are to support the farmers from distress sales and to
-          procure food grains for public distribution. In case the market price
-          for the commodity falls below the announced minimum price due to
-          bumper production and glut in the market, government agencies purchase
-          the entire quantity offered by the farmers at the announced minimum
-          price.
-        </h5>
-      </section>
-      <button onClick={()=>onExportClick()} style={{color:'#eb2f06'}} className="btn btn-success">export</button>
-      <div
-      
-        className="ag-theme-alpine"
-        style={{
-          height: "500px",
-          width: "1500px",
-        }}
-        
-      >
-        
-        <AgGridReact
-          columnDefs={columns}
-          onGridReady={onGridReady}
-          pagination={true}
-          paginationPageSize={10}
-          paginationAutoPageSize={true}
-          onRowDoubleClicked={UpadateFunction}
-          onCellEditingStopped={cellEditing}
-        
-          // onRowValueChanged={cellEditing}
-          // onGridReady={onGridReady1}
-          
-        />
-     
+      <div>
+        <Carousel />
+
+        <section>
+          <h1 style={{ textAlign: "center", color: "#eb2f06" }}>
+            <br/>
+            Shemes Available For Market Price
+          </h1>
+
+          <h5
+            style={{ textAlign: "justify", color: "#2C3A47", margin: "5px" }}
+            data-testid="testcase"
+          >
+            Minimum Support Price (MSP) is a form of market intervention by the
+            Government of India to insure agricultural producers against any
+            sharp fall in farm prices. The minimum support prices are announced
+            by the Government of India at the beginning of the sowing season for
+            certain crops on the basis of the recommendations of the Commission
+            for Agricultural Costs and Prices (CACP). MSP is price fixed by
+            Government of India to protect the producer - farmers - against
+            excessive fall in price during bumper production years. The minimum
+            support prices are a guarantee price for their produce from the
+            Government. The major objectives are to support the farmers from
+            distress sales and to procure food grains for public distribution.
+            In case the market price for the commodity falls below the announced
+            minimum price due to bumper production and glut in the market,
+            government agencies purchase the entire quantity offered by the
+            farmers at the announced minimum price.
+          </h5>
+        </section>
+        <br/>
+        <button
+          onClick={() => onExportClick()}
+          style={{ color: "white" }}
+          className="btn btn-success"
+        >
+          export
+        </button>
+        <br/>
+        <br/>
+        <div
+          className="ag-theme-alpine"
+          style={{
+            height: "500px",
+            width: "1500px",
+          }}
+        >
+          <AgGridReact
+            columnDefs={columns}
+            onGridReady={onGridReady}
+            pagination={true}
+            paginationPageSize={10}
+            paginationAutoPageSize={true}
+            onRowDoubleClicked={UpadateFunction}
+            onCellEditingStopped={cellEditing}
+
+            // onRowValueChanged={cellEditing}
+            // onGridReady={onGridReady1}
+          />
+        </div>
       </div>
     </div>
-     </div>
   );
 };
 
 export default Schemes;
-
-
-
-
-
-
-
 
 // import React, { Component } from "react";
 // import Carousel from "../layout/Carousel";
@@ -262,8 +263,6 @@ export default Schemes;
 //       force: true
 //     });
 
-
-    
 //   }
 //   onRowEditingStopped(params) {
 //     params.api.refreshCells({
@@ -272,15 +271,7 @@ export default Schemes;
 //       force: true,
 //     }
 //     );
-    
-   
 
-    
-
-
-
-
-    
 //   }
 
 //   render() {
@@ -331,7 +322,7 @@ export default Schemes;
 //             enableRangeSelection={true}
 //             onGridReady={this.onGridReady}
 //             rowData={this.state.rowData}
-          
+
 //           />
 //         </div>
 //       </div>

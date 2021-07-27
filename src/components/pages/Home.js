@@ -9,10 +9,11 @@ const Home=()=>{
 <section id="education">
 
     <div id="about-para">
+      <br/>
       
-      <h1 style={{marginLeft:'78%',color:'#2C3A47'}}>Agriculture</h1>
+      <h1 style={{marginLeft:'78%',color:'#2C3A47',marginLeft:'60px'}}       data-testid='testcase'>Agriculture</h1>
       
-      <p  style={{ background:'  	#D3D3D3' ,textAlign:'Justify', textIndent:'2px',color:'#1B1464'}}>Agriculture is the science, art and practice of cultivating plants
+      <p  style={{ background:'  	#D3D3D3' ,textAlign:'Justify', textIndent:'2px',color:'#1B1464'}} >Agriculture is the science, art and practice of cultivating plants
    and livestock.Agriculture was the key development in the rise of sedentary human 
    civilization, whereby farming of domesticated species created food surpluses that
     enabled people to live in cities. The history of agriculture began thousands of years ago. After gathering wild grains beginning at least 105,000 years ago, nascent farmers began to plant them around 11,500 years ago. Pigs, sheep, and cattle were domesticated over 10,000 years ago. Plants were independently cultivated in at least 11 regions of the world. Industrial agriculture based on large-scale monoculture in the twentieth century came to dominate agricultural output, though about 2 billion people still depended on subsistence agriculture.
@@ -45,10 +46,10 @@ Cattle were domesticated from the wild aurochs in the areas of modern Turkey and
 
 
 </section>
-<section id="education">
+<section id="education" >
 
 <div id="about-para">
-  <h1 style={{marginLeft:'78%',color:'#2C3A47'}}>Contemporary agriculture</h1>
+  <h1 style={{marginLeft:'78%',color:'#2C3A47', marginLeft:'60px'}} data-testid='testcase-1'>Contemporary agriculture</h1>
   <p  style={{ background:'  	#D3D3D3' ,textAlign:'justify',color:'#1B1464'}}>Agriculture is the science, art and practice of cultivating plants
    and livestock.Agriculture was the key development in the rise of sedentary human 
    civilization, whereby farming of domesticated species created food surpluses that

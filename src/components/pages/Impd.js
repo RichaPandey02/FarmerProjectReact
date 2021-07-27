@@ -69,22 +69,8 @@ const ImportantAddress = () => {
       // filter: true,
       // floatingFilter: true,
     },
-    {
-      headerName: "FAX",
-      field: "Fax",
-      // sortable: true,
-       editable: true,
-      // filter: true,
-      // floatingFilter: true,
-    },
-    {
-      headerName: "OTHER INFORMATION",
-      field: "other_Information",
-      // sortable: true,
-       editable: true,
-      // filter: true,
-      // floatingFilter: true,
-    },
+   
+   
     {
       headerName:"ACTION",
       cellRendererFramework:(params)=>

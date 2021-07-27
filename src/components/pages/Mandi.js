@@ -38,7 +38,7 @@ const Mandi = () => {
       sortable: true,
       editable: true,
       filter: true,
-      checkboxSelection: true,
+      // checkboxSelection: true,
       floatingFilter: true,
       flex:1
     },
@@ -118,8 +118,9 @@ const Mandi = () => {
     <div >
       
       <Carousel/>
-      <h1 style={{textAlign:'center' ,color:'#eb2f06'}}> CURRENTLY AVAILABLE MANDI'S</h1>
-          
+      <br/>
+      <h1 style={{textAlign:'center' ,color:'#eb2f06'}}> Currently Available Mandi's</h1>
+          <br/>
           <div
           className="ag-theme-alpine"
           style={{

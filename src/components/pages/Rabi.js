@@ -21,6 +21,7 @@ const Rabi = () => {
           crops, fibre crops, oil crops, ornamental crops, and industrial crops.
         </h6>
       </div>
+      <br/>
       <div className="wrapper">
         <div>
           <img

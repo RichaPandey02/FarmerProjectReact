@@ -25,6 +25,7 @@ const Khareef = () => {
           corn, wheat and rice.
         </h6>
       </div>
+      <br/>
       <div className="wrapper">
         <div>
           <img
