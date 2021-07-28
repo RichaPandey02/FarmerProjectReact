@@ -1,0 +1,19 @@
+h1{
+  color: #eb2f06;
+  font-family: 'Lucida Console", "Courier New", monospace';
+  margin-left:'60px'
+}
+p{
+    background-color: "#D3D3D3";
+
+   text-align : "Justify";
+    text-indent: "2px";
+    color: "#1B1464";
+     font-family: "Arial, Helvetica, sans-serif;"
+}
+#about-para h1{
+    margin-left: "78%"
+}
+.homegraph{
+    float: left;
+}

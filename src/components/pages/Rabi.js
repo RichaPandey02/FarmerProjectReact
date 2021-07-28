@@ -1,12 +1,13 @@
 import React from "react";
 import Carousel from "../layout/Carousel";
+import Rabii from '../styles/Rabii.css'
 const Rabi = () => {
   return (
     <div>
       <Carousel />
       <div>
-        <h1 style={{color:'#ff4757',textAlign:'center'}}>RABI CROPS</h1>
-        <h5 style={{fontFamily:'Lucida Console", "Courier New", monospace'}} >
+        <h1>RABI CROPS</h1>
+        <h5  >
           Rabi crops or rabi harvest are rural crops that are planted in winter
           and harvested in the spring in India. The term is derived from the
           Arabic word for spring, which is used in the Indian subcontinent,
@@ -28,7 +29,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1437252611977-07f74518abd7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2hlYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}>wheat</h1>
+          <h1>wheat</h1>
           <h5>
             Wheat is one of the world's most commonly consumed cereal grains. It
             comes from a type of grass (Triticum) that is grown in countless
@@ -42,7 +43,7 @@ const Rabi = () => {
             style={{ height: "150px" }}
           />
 
-          <h1 style={{color:'#eb2f06'}}>garlic</h1>
+          <h1>garlic</h1>
           <h5>
             Garlic belongs to the genus Allium and is closely related to the
             onion, rakkyo (an onion found in Asia), scallion, chive, leek, and
@@ -54,7 +55,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1515543904379-3d757afe72e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2twZWF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}>chickpea</h1>
+          <h1>chickpea</h1>
           <h5>
             The chickpea or chick pea (Cicer arietinum) is an annual legume of
             the family Fabaceae, subfamily Faboideae. Its different types are
@@ -67,7 +68,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1573145757298-85c8a093545d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VtaW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> cumin</h1>
+          <h1> cumin</h1>
           <h5>
             Cumin is a popular spice used in cooking cuisine all over the world.
             Made from the ground-up seeds of the Cuminum cyminum plant, cumin is
@@ -79,7 +80,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1508747703725-719777637510?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8b25pb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}>ONION</h1>
+          <h1 >ONION</h1>
           <h5>
             The onion also known as the bulb onion or common onion, is a
             vegetable that is the most widely cultivated species of the genus
@@ -91,7 +92,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1599193804298-455ae09448ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=417&q=80"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}>mustard</h1>
+          <h1>mustard</h1>
           <h5>
             Mustard, any of several herbs belonging to the mustard family of
             plants, Brassicaceae (Cruciferae), or the condiment made from these
@@ -104,7 +105,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1564639185130-4e946d2448b0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3BpdW18ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> opium</h1>
+          <h1> opium</h1>
           <h5>
             Opium is a highly addictive narcotic drug acquired in the dried
             latex form the opium poppy (Papaver somniferum) seed pod. ... The
@@ -118,7 +119,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1573605954553-a39394846cfc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3VnYXJjYW5lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> sugarcane</h1>
+          <h1> sugarcane</h1>
           <h5>
             Sugarcane or sugar cane refers to several species and hybrids of
             tall perennial grass in the genus Saccharum, tribe Andropogoneae,
@@ -130,7 +131,7 @@ const Rabi = () => {
             src="https://media.istockphoto.com/photos/fenugreek-seeds-with-green-leaves-picture-id1150921460?b=1&k=6&m=1150921460&s=170667a&w=0&h=GqvsS045mSbADUguaq4sQPBx5I9aiibqP8rZIchfMEI="
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> fengreek</h1>
+          <h1> fengreek</h1>
           <h5>
             Based on the available evidence, fenugreek has benefits for lowering
             blood sugar levels, boosting testosterone, and increasing milk
@@ -144,7 +145,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1569936906148-06de87cb0681?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXNod2FnYW5kaGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> ashwagandha</h1>
+          <h1 > ashwagandha</h1>
           <h5>
             Ashwagandha contains chemicals that might help calm the brain,
             reduce swelling, lower blood pressure, and alter the immune system.
@@ -158,7 +159,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1614373532018-92a75430a0da?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2F0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> oat</h1>
+          <h1> oat</h1>
           <h5 >
             The oat (Avena sativa), sometimes called the common oat, is a
             species of cereal grain grown for its seed, which is known by the
@@ -171,7 +172,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1576020956260-490f5c5fc892?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGVudGlsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> lentil</h1>
+          <h1> lentil</h1>
           <h5>
             Lentils belong to the legume family. They resemble a tiny bean, grow
             in pods, and come in red, brown, black, and green varieties. ...
@@ -185,7 +186,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1535189487909-a262ad10c165?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29yaWFuZGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}>coriander</h1>
+          <h1>coriander</h1>
           <h5>
             Coriander is an herb that's commonly used to flavor international
             dishes. It comes from the Coriandrum sativum plant and is related to
@@ -200,7 +201,7 @@ const Rabi = () => {
             src="https://media.istockphoto.com/photos/close-up-sorghum-field-in-sun-light-picture-id512142058?b=1&k=6&m=512142058&s=170667a&w=0&h=oIBANaGv1WrOr7Pmjqr-0RyJsDUxaQkaymT7UT15fLI="
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> sorghum</h1>
+          <h1> sorghum</h1>
           <h5>
             Sorghum is an ancient cereal grain belonging to the grass family
             Poaceae. It's small, round, and usually white or yellow — though
@@ -214,7 +215,7 @@ const Rabi = () => {
             src="https://images.unsplash.com/photo-1571341514065-b710ff6c07d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhcmxleXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             style={{ height: "150px" }}
           />
-          <h1 style={{color:'#eb2f06'}}> barley</h1>
+          <h1> barley</h1>
           <h5>
             Barley (Hordeum vulgare), a member of the grass family, is a major
             cereal grain grown in temperate climates globally. It was one of the

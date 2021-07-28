@@ -12,8 +12,8 @@ import {
 
 import Footer from './components/layout/Footer';
 import Contact from './components/pages/Contact';
-import Login from './components/pages/Login'
-import Register from './components/pages/Register'
+
+
 import Home from './components/pages/Home';
 import Impd from './components/pages/Impd'
 import Schemes from './components/pages/Schemes';
@@ -39,8 +39,8 @@ function App() {
           
         
         <Route exact path="/home" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Register} />
+        
+        
         <Route exact path="/about" component={About}/>
         <Route exact path="/schemes" component={Schemes} />
         <Route exact path="/contactus" component={Contact} />

@@ -3,6 +3,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
  import axios from 'axios';
+ import Mandii from "../styles/Mandii.css";
 // import Pagination from "../layout/Pagination";
 import Carousel from "../layout/Carousel";
 const Mandi = () => {
@@ -119,7 +120,7 @@ const Mandi = () => {
       
       <Carousel/>
       <br/>
-      <h1 style={{textAlign:'center' ,color:'#eb2f06'}}> Currently Available Mandi's</h1>
+      <h1> Currently Available Mandi's</h1>
           <br/>
           <div
           className="ag-theme-alpine"

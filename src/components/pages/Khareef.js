@@ -1,11 +1,12 @@
 import React from "react";
+import Kharif from "../styles/Kharif.css";
 import Carousel from "../layout/Carousel";
 const Khareef = () => {
   return (
     <div>
       <Carousel />
       <div>
-        <h1 style={{color:'#ff4757',textAlign:'center'}}>Khareef CROPS</h1>
+        <h1>Khareef CROPS</h1>
         <h5>
           Kharif Crops: (crops means: when a similar plant grown on fields) that
           are sown in the rainy season from June to September are characterized

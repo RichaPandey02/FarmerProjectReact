@@ -21,7 +21,8 @@ const Schemes = () => {
       editable: true,
       // checkboxSelection: true,
       color: "#2C3A47",
-      flex: 1,
+      flex:1,
+            minWidth:120
     },
     {
       headerName: "STATE",
@@ -29,20 +30,28 @@ const Schemes = () => {
       editable: true,
       filter: true,
       floatingFilter: true,
+      flex: 1,
+      minwidth:120
     },
     
     {
       headerName: "WEBSITE",
       field: "Website",
       editable: true,
+      flex: 1,
+      minwidth:120
     },
     {
       headerName: "DESCRIPTION",
       field: "Description",
       editable: true,
+      flex: 1,
+      minwidth:120
     },
     {
       headerName: "ACTION",
+      flex: 1,
+      minwidth:120,
       cellRendererFramework: (params) => (
         <div>
           <button
@@ -128,6 +137,8 @@ const Schemes = () => {
           style={{
             height: "500px",
             width: "1500px",
+           
+            
           }}
         >
           <AgGridReact

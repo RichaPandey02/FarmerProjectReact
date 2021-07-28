@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import cnt from "../layout/cnt.css";
+import cnt from "../styles/cnt.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Carousel from "../layout/Carousel";
