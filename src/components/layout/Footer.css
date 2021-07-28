@@ -1,13 +1,4 @@
 
-body {
-  margin: 0px;
-  font-family: sans-serif;
-  font-size: 30px;
-}
-
-
-
-/* Body Header */
 
 #body-header {
   height: 65vh;
@@ -529,4 +520,15 @@ button:focus {
 }
 .fit{
   background-color: #1e3799;
+} */
+.my-details-info-container {
+  margin-bottom: 20px;
+  color: #d9dcdd;
+  font-size: 1rem;
+}
+.my-details-icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  margin-right: 0.5rem;
 }

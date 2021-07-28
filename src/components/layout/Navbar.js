@@ -1,19 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import './Nav.css'
 import Dropdown from "react-bootstrap/Dropdown";
 
 const Navbar = () => {
   return (
     <div>
       <header id="body-header " style={{ backgroundColor: "black" }}>
+      
         <nav className="navbar navbar-expand-lg navbar-light">
-          <ul className="horizontal-list nav-menu">
+          <ul className="horizontal-list nav-menu " >
             <li className="nav-item">
               <h5>
                 <NavLink
-                  className="nav-link"
-                  style={{ color: "white" }}
+                   className="nav-link"
+                  style={{ color: "white"}}
+                  style={{hover:'red'}}
+                   
                   exact
                   to="/"
                 >
@@ -26,7 +29,7 @@ const Navbar = () => {
               <h5>
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/help"
                 >
@@ -39,7 +42,7 @@ const Navbar = () => {
                 {" "}
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/mandi"
                 >
@@ -51,7 +54,7 @@ const Navbar = () => {
               <h5>
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/Impd"
                 >
@@ -64,7 +67,7 @@ const Navbar = () => {
                 {" "}
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/schemes"
                 >
@@ -77,7 +80,7 @@ const Navbar = () => {
                 {" "}
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/contactus"
                 >
@@ -89,7 +92,7 @@ const Navbar = () => {
               <h5>
                 <NavLink
                   className="nav-link"
-                  style={{ color: "white" }}
+                  // style={{ color: "white" }}
                   exact
                   to="/about"
                 >

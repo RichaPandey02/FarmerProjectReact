@@ -101,13 +101,14 @@ const ImportantAddress = () => {
   const cellDeleteing=(resp)=>{
     id = resp.data._id;
     axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data)
-    alert("your data has been deleted")
+    alert("your data has been updated 🙂☺ ");
   }
 
   return (
     <div >
       
       <Carousel/>
+      <br/>
       <h1 style={{textAlign:'center', color:'#eb2f06'}}>
       SOIL TESTING LABS
       </h1>

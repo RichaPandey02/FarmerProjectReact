@@ -40,7 +40,7 @@ const About = () => {
           <img src="https://image.shutterstock.com/image-photo/kolkata-india-march-18-2017-600w-611691938.jpg"  style={{height:300,width:420}}/>
         </div>
         <div>
-        <i className="material-icons brand-icon" style={{fontSize:'100px'}}>history_toggle_off</i> 
+        <i className="material-icons brand-icon" style={{fontSize:'100px'}} data-testid="history">history_toggle_off</i> 
           <h1 style={{color:'#eb2f06'}}>History</h1>
           <p data-testid="testcase-1">
             The development of agriculture enabled the human population to grow

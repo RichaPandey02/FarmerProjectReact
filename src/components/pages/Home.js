@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from '../layout/Carousel'
-import Footer from '../layout/Footer'
+
 const Home=()=>{
     return(
         <div>
@@ -11,9 +11,9 @@ const Home=()=>{
     <div id="about-para">
       <br/>
       
-      <h1 style={{marginLeft:'78%',color:'#2C3A47',marginLeft:'60px'}}       data-testid='testcase'>Agriculture</h1>
+      <h1 style={{color:'#2C3A47',marginLeft:'60px',color:'#eb2f06',fontFamily:'Lucida Console", "Courier New", monospace'}}       data-testid='testcase' >Agriculture</h1>
       
-      <p  style={{ background:'  	#D3D3D3' ,textAlign:'Justify', textIndent:'2px',color:'#1B1464'}} >Agriculture is the science, art and practice of cultivating plants
+      <p  style={{ background:'  	#D3D3D3' ,textAlign:'Justify', textIndent:'2px',color:'#1B1464',fontFamily:' font-family: Arial, Helvetica, sans-serif;'}} >Agriculture is the science, art and practice of cultivating plants
    and livestock.Agriculture was the key development in the rise of sedentary human 
    civilization, whereby farming of domesticated species created food surpluses that
     enabled people to live in cities. The history of agriculture began thousands of years ago. After gathering wild grains beginning at least 105,000 years ago, nascent farmers began to plant them around 11,500 years ago. Pigs, sheep, and cattle were domesticated over 10,000 years ago. Plants were independently cultivated in at least 11 regions of the world. Industrial agriculture based on large-scale monoculture in the twentieth century came to dominate agricultural output, though about 2 billion people still depended on subsistence agriculture.
@@ -30,8 +30,8 @@ Modern agronomy, plant breeding, agrochemicals such as pesticides and fertilizer
   <section id="education">
 
 <div id="about-para">
-  <h1 style={{marginLeft:'78%',color:'#2C3A47'}}>History</h1>
-  <p style={{ background:'  	#D3D3D3' ,textAlign:'justify',color:'#1B1464'}}>The development of agriculture enabled the human population to
+  <h1 style={{marginLeft:'78%',color:'#eb2f06'}}>History</h1>
+  <p style={{ background:'  	#D3D3D3' ,textAlign:'justify',color:'#1B1464',fontFamily:' font-family: Arial, Helvetica, sans-serif;'}}>The development of agriculture enabled the human population to
     grow many times larger than could be sustained by hunting and gathering.
      Agriculture began independently in different parts of the globe, and included 
      a diverse range of taxa, in at least 11 separate centres of origin. Wild grains
@@ -49,8 +49,8 @@ Cattle were domesticated from the wild aurochs in the areas of modern Turkey and
 <section id="education" >
 
 <div id="about-para">
-  <h1 style={{marginLeft:'78%',color:'#2C3A47', marginLeft:'60px'}} data-testid='testcase-1'>Contemporary agriculture</h1>
-  <p  style={{ background:'  	#D3D3D3' ,textAlign:'justify',color:'#1B1464'}}>Agriculture is the science, art and practice of cultivating plants
+  <h1 style={{marginLeft:'78%',color:'#eb2f06', marginLeft:'60px'}} data-testid='testcase-1'>Contemporary agriculture</h1>
+  <p  style={{ background:'  	#D3D3D3' ,textAlign:'justify',color:'#1B1464',fontFamily:' font-family: Arial, Helvetica, sans-serif;'}}>Agriculture is the science, art and practice of cultivating plants
    and livestock.Agriculture was the key development in the rise of sedentary human 
    civilization, whereby farming of domesticated species created food surpluses that
     enabled people to live in cities. The history of agriculture began thousands of years ago. After gathering wild grains beginning at least 105,000 years ago, nascent farmers began to plant them around 11,500 years ago. Pigs, sheep, and cattle were domesticated over 10,000 years ago. Plants were independently cultivated in at least 11 regions of the world. Industrial agriculture based on large-scale monoculture in the twentieth century came to dominate agricultural output, though about 2 billion people still depended on subsistence agriculture.
@@ -70,7 +70,7 @@ Modern agronomy, plant breeding, agrochemicals such as pesticides and fertilizer
  <section id="education">
 
     <div id="about-para">
-      <h1 style={{marginLeft:'78%',color:'#2C3A47'}}>WorkForce</h1>
+      <h1 style={{marginLeft:'78%',color:'#eb2f06'}}>WorkForce</h1>
       
 
 
@@ -93,7 +93,7 @@ Modern agronomy, plant breeding, agrochemicals such as pesticides and fertilizer
           <span>
               <i className="fas fa-th-list"></i>
           </span>
-          <span style={{color:'#2C3A47'}}> Facts About Agriculture </span>
+          <span style={{color:'#eb2f06'}}> Facts About Agriculture </span>
       </h1>
 
       <div id="portfolio-container">

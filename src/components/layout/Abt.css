@@ -1,18 +1,16 @@
-.wrapper >div {
-    background-color: #eee;
-    padding: 1em;
-    grid-auto-rows: minmax(200px,auto);
-    align-items:flex-start
-    
+.wrapper > div {
+  background-color: #eee;
+  padding: 1em;
+  grid-auto-rows: minmax(200px, auto);
+  align-items: flex-start;
 }
-.wrapper > div:nth-child(odd){
-    background-color: #ddd;
+.wrapper > div:nth-child(odd) {
+  background-color: #ddd;
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    /* grid-column-gap: 1em;
-    grid-row-gap:1em; */
-    grid-gap:4em;
-    align-items: stretch;
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+
+  grid-gap: 4em;
+  align-items: stretch;
 }

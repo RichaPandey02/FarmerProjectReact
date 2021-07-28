@@ -6,7 +6,7 @@ const Rabi = () => {
       <Carousel />
       <div>
         <h1 style={{color:'#ff4757',textAlign:'center'}}>RABI CROPS</h1>
-        <h6 >
+        <h5 style={{fontFamily:'Lucida Console", "Courier New", monospace'}} >
           Rabi crops or rabi harvest are rural crops that are planted in winter
           and harvested in the spring in India. The term is derived from the
           Arabic word for spring, which is used in the Indian subcontinent,
@@ -19,7 +19,7 @@ const Rabi = () => {
           winter and harvested in the spring season in India. In the type of
           rabi crop, we can simply divide in some category like food crops, feed
           crops, fibre crops, oil crops, ornamental crops, and industrial crops.
-        </h6>
+        </h5>
       </div>
       <br/>
       <div className="wrapper">
