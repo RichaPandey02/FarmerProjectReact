@@ -17,7 +17,8 @@ import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import Impd from './components/pages/Impd'
 import Schemes from './components/pages/Schemes';
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.js'
 import About from './components/pages/About';
 import Mandi from './components/pages/Mandi'
 import Rabi from './components/pages/Rabi';

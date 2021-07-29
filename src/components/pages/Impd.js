@@ -1,13 +1,13 @@
 import React from "react";
 
- import axios from 'axios';
-import Imp from '../styles/Imp.css' 
+import axios from "axios";
+import Imp from "../styles/Imp.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Carousel from "../layout/Carousel";
 const ImportantAddress = () => {
-    const onGridReady = (params) => {
+  const onGridReady = (params) => {
     console.log("grid is ready");
     fetch("http://localhost:3000/api/SoilSchema")
       .then((resp) => resp.json())
@@ -18,32 +18,30 @@ const ImportantAddress = () => {
     {
       headerName: "STATE",
       field: "STATE",
-      
-       editable: true,
-     
-      flex:1
+
+      editable: true,
+
+      flex: 1,
     },
     {
       headerName: "DIST",
       field: "dist",
-    
-       editable: true,
-      
+
+      editable: true,
     },
     {
       headerName: "OFFICE ADDRESS",
       field: "Office_Address",
-     
-       editable: true,
-      
+
+      editable: true,
     },
     {
       headerName: "NO OF STAFF",
       field: "No_of_Staff",
-     
-       editable: true,
-       filter: true,
-       floatingFilter: true,
+
+      editable: true,
+      filter: true,
+      floatingFilter: true,
     },
     {
       headerName: "TELEPHONE",
@@ -57,7 +55,7 @@ const ImportantAddress = () => {
       headerName: "SOIL EQUIPMENT",
       field: "Soil_Equipment",
       // sortable: true,
-       editable: true,
+      editable: true,
       // filter: true,
       // floatingFilter: true,
     },
@@ -65,53 +63,52 @@ const ImportantAddress = () => {
       headerName: "SOIL TEST NUMBER",
       field: "Soil_Test_No",
       // sortable: true,
-       editable: true,
+      editable: true,
       // filter: true,
       // floatingFilter: true,
     },
-   
-   
+
     {
-      headerName:"ACTION",
-      cellRendererFramework:(params)=>
-      <div>
-        <button onClick={()=>cellDeleteing(params)} className="btn btn-danger">Delete</button>
-        {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
-      
-      </div>
-    }
-    
+      headerName: "ACTION",
+      cellRendererFramework: (params) => (
+        <div>
+          <button
+            onClick={() => cellDeleteing(params)}
+            className="btn btn-danger"
+          >
+            Delete
+          </button>
+          {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+        </div>
+      ),
+    },
   ];
 
   let id;
   const UpadateFunction = (resp) => {
-    
     console.log(resp);
     id = resp.data._id;
+    alert("Do you want to update tour data?🙄🙄")
   };
 
   const cellEditing = (resp) => {
-    
     id = resp.data._id;
-    
-    axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
+
+    axios.put(`http://localhost:3000/api/soil/${id}`, resp.data);
     console.log(resp);
-    alert("your data has been updated")
-  };
-  const cellDeleteing=(resp)=>{
-    id = resp.data._id;
-    axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data)
     alert("your data has been updated 🙂☺ ");
-  }
+  };
+  const cellDeleteing = (resp) => {
+    id = resp.data._id;
+    axios.delete(`http://localhost:3000/api/soil/${id}`, resp.data);
+    alert("your data has been Deleted 🙂☺ ");
+  };
 
   return (
-    <div >
-      
-      <Carousel/>
-      <br/>
-      <h1>
-      SOIL TESTING LABS
-      </h1>
+    <div>
+      <Carousel />
+      <br />
+      <h1>SOIL TESTING LABS</h1>
       <div
         className="ag-theme-alpine"
         style={{
@@ -129,10 +126,7 @@ const ImportantAddress = () => {
           onCellEditingStopped={cellEditing}
         />
       </div>
-     
     </div>
-
-    
   );
 };
 

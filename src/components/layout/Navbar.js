@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Nav from '../styles/Nav.css'
+// import Nav from '../styles/Nav.css'
 import Dropdown from "react-bootstrap/Dropdown";
-// import { NavDropdown, Nav, Navbar } from "react-bootstrap";
+ import { NavDropdown, Nav, Navbar } from "react-bootstrap";
 const Navbar1 = () => {
   return (
+
+    // My code
     // <div>
     //   <header id="body-header " style={{ backgroundColor: "black" }}>
 
@@ -133,6 +135,12 @@ const Navbar1 = () => {
     //   </header>
     // </div>
 
+
+
+//Snehil code
+
+
+
     // <div>
     //     <header>
     //         <Navbar bg="dark" variant="dark">
@@ -154,14 +162,7 @@ const Navbar1 = () => {
     //                     </NavDropdown>
     //                 </Nav>
     //                 </Navbar.Collapse>
-    //                 {/* <nav>
-    //                 <Nav.Link>
-    //                 <Form inline>
-    //                     <Input type="text" placeholder="Search" className="mr-sm-1" />
-    //                     <Button variant="outlined" color="primary" href="#outlined-buttons">Search</Button>
-    //                 </Form>
-    //                 </av.Link>
-    //                 </nav> */}
+                   
     //         </Navbar>
     //     </header>
     // </div>
@@ -170,7 +171,7 @@ const Navbar1 = () => {
 
 
 
-
+// Aman sir
 
     <div className="ric">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -223,9 +224,6 @@ const Navbar1 = () => {
                 About
               </NavLink>
             </li>
-
-
-
             <Dropdown>
                   <Dropdown.Toggle variant="success">Crops</Dropdown.Toggle>
                   <Dropdown.Menu>
@@ -246,13 +244,32 @@ const Navbar1 = () => {
                     </h5>
                  </Dropdown.Menu>
                </Dropdown>
-
-
-
-          </ul>
+                </ul>
         </div>
       </nav>
     </div>
+
+
+
+
+//w3school code
+
+
+
+//     <div className="topnav" id="myTopnav">
+//   <NavLink exact to="/">Home</NavLink>
+//   <NavLink exact to="/help">Helplines</NavLink>
+//   <NavLink exact to="/mandi">Mandi</NavLink>
+//   <NavLink exact to="/Impd">ImportantAddress</NavLink>
+//   <NavLink exact to="/schemes">Schemes</NavLink>
+//   <NavLink exact to="/contactus">ContactUs</NavLink>
+//   <NavLink exact to="/about">About</NavLink>
+  
+  
+  
+// </div>
+
+
   );
 };
 

@@ -133,7 +133,8 @@ const Schemes = () => {
         <br/>
         <br/>
         <div
-          className="ag-theme-alpine"
+          className="ag-theme-alpine
+          container table-responsive-sm"
           style={{
             height: "500px",
             width: "1500px",
