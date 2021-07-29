@@ -43,7 +43,7 @@ const Helplines = () => {
         <br />
         <h1>Wanna help...Please Call Us 😊😊</h1>
 
-        <h5 data-testid="testcase">
+        <h5 data-testid="testcase" className="help">
           Bharat Sarkar has started a Kisan Call Center for the support of the
           farmers, whose farmers and farmers can avail the benefits and
           information of the services related to the crop seed, by calling the

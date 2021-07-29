@@ -1,0 +1,8 @@
+navbar navbar-expand-lg navbar-light bg-light{
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+  }

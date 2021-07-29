@@ -1,19 +1,127 @@
-h1{
+h1 {
   color: #eb2f06;
   font-family: 'Lucida Console", "Courier New", monospace';
-  margin-left:'60px'
+  margin-left: "60px";
 }
-p{
-    background-color: "#D3D3D3";
+p {
+  background-color: "#D3D3D3";
 
-   text-align : "Justify";
-    text-indent: "2px";
-    color: "#1B1464";
-     font-family: "Arial, Helvetica, sans-serif;"
+  text-align: "Justify";
+  text-indent: "2px";
+  color: "#1B1464";
+  font-family: "Arial, Helvetica, sans-serif;";
 }
-#about-para h1{
-    margin-left: "78%"
+#about-para h1 {
+  margin-left: "78%";
 }
-.homegraph{
-    float: left;
+.homegraph {
+  float: left;
+}
+
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+section:nth-child(2n) {
+  background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+  background-color: white;
+}
+
+.section-heading {
+  width: auto;
+  padding: 20px 10px 10px;
+  font-weight: 400;
+}
+
+.section-heading span {
+  font-size: 40px;
+  color: #2857a4;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+
+#about-para {
+  padding: 10px;
+  width: 70%;
+  text-align: justify;
+  color: grey;
+  line-height: 28px;
+  font-size: 1.1rem;
+  margin-top: 5%;
+}
+
+#portfolio-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.portfolio-image-container {
+  max-width: 300px;
+  overflow: hidden;
+  margin: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.portfolio-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-details {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: transparent;
+  text-align: center;
+  padding: 10px;
+}
+
+.portfolio-image-container:hover {
+  box-shadow: 0 0 20px #74adc8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+  background-color: #80808078;
+  color: white;
+}
+
+.homegraph {
+  height: 25%;
+  width: 25%;
+  margin-top: 10%;
+  float: left;
+}
+.agr{
+  margin-left: 60%;
+}
+.history{
+  margin-right: 80%;
+}
+.cont agr{
+  margin-left:10% ;
+  text-align: center;
+}
+.workforce{
+  margin-right: 60%;
 }

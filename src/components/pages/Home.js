@@ -10,7 +10,7 @@ const Home = () => {
           <br />
 
           <h1
-           
+           className="agr"
             data-testid="testcase"
           
           >
@@ -51,7 +51,7 @@ const Home = () => {
 
       <section id="education">
         <div id="about-para">
-          <h1>History</h1>
+          <h1 className="history">History</h1>
           <p
             
           >
@@ -91,7 +91,7 @@ const Home = () => {
       <section id="education">
         <div id="about-para">
           <h1
-            
+            className="cont agr"
             data-testid="testcase-1"
           >
             Contemporary agriculture
@@ -130,7 +130,7 @@ const Home = () => {
 
       <section id="education">
         <div id="about-para">
-          <h1 >WorkForce</h1>
+          <h1 className="workforce">WorkForce</h1>
 
           <p>
             <img
