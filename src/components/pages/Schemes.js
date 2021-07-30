@@ -1,9 +1,13 @@
 import React from "react";
 import axios from "axios";
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "../layout/Carousel";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+import { Button } from 'react-bootstrap'
 
 const Schemes = () => {
   let gridApi;
@@ -71,6 +75,7 @@ const Schemes = () => {
     console.log(resp);
     id = resp.data._id;
     alert("Do you want to update tour data?🙄🙄");
+    
   };
 
   const cellEditing = (resp) => {
@@ -78,12 +83,26 @@ const Schemes = () => {
 
     axios.put(`http://localhost:3000/api/scheme/${id}`, resp.data);
     console.log(resp);
-    alert("your data has been updated 🙂☺ ");
+     alert("your data has been updated 🙂☺ ");
+   
   };
   const cellDeleteing = (resp) => {
     id = resp.data._id;
+    resp.api.applyTransaction({
+      remove:[resp.node.data]
+    })
     axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data);
-    alert("your data has been deleted");
+    
+    //  alert("your data has been deleted");
+
+
+
+
+
+    
+  
+    
+    
   };
 
   const onExportClick = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { AgGridReact } from "ag-grid-react";
+import Modal from "react-bootstrap/Modal";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import axios from "axios";
@@ -94,9 +95,12 @@ const Mandi = () => {
     alert("your data has been updated😊😊");
   };
   const cellDeleteing = (resp) => {
+    resp.api.applyTransaction({
+      remove:[resp.node.data]
+    })
     id = resp.data._id;
     axios.delete(`http://localhost:3000/api/mandi/${id}`, resp.data);
-    alert("your data has been deleted");
+    alert("your data has been deleted")
   };
 
   return (
@@ -106,7 +110,7 @@ const Mandi = () => {
       <h1> Currently Available Mandi's</h1>
       <br />
       <div
-        className="ag-theme-alpine"
+        className="ag-theme-alpine  container table-responsive-sm"
         style={{
           height: "500px",
           width: "1500px",

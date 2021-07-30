@@ -100,6 +100,9 @@ const ImportantAddress = () => {
   };
   const cellDeleteing = (resp) => {
     id = resp.data._id;
+    resp.api.applyTransaction({
+      remove:[resp.node.data]
+    })
     axios.delete(`http://localhost:3000/api/soil/${id}`, resp.data);
     alert("your data has been Deleted 🙂☺ ");
   };
@@ -110,7 +113,7 @@ const ImportantAddress = () => {
       <br />
       <h1>SOIL TESTING LABS</h1>
       <div
-        className="ag-theme-alpine"
+        className="ag-theme-alpine "
         style={{
           height: "500px",
           width: "1500px",
