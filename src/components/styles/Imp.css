@@ -2,3 +2,7 @@ h1{
     color:'#eb2f06';
     text-align: center;
 }
+.delete {
+    background-color: #ff3838;
+    width: 80px;
+  }

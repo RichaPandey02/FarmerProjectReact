@@ -1,0 +1,16 @@
+.delete {
+  background-color: #ff3838;
+  width: 80px;
+}
+.export {
+  background-color: #20bf6b;
+}
+h1 {
+  color: #ff3838;
+  text-align: center;
+}
+h5 {
+  text-align: justify;
+  color: "#2C3A47";
+  margin: "5px";
+}

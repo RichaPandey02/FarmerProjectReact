@@ -54,7 +54,7 @@ const Contact = () => {
       <Carousel />
       <div className="container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="text-center mb-4" style={{ color: "#eb2f06" }}>
+          <h2 className="text-center mb-4" >
             CONTACT US👍😁{" "}
           </h2>
           <form onSubmit={(e) => onSubmit(e)}>
@@ -70,7 +70,7 @@ const Contact = () => {
               />
 
               {userErr ? (
-                <span style={{ color: "red", fontSize: "20px" }}>
+                <span >
                   Please Type correct value...
                 </span>
               ) : (
@@ -117,7 +117,7 @@ const Contact = () => {
             </div>
 
             <button
-              className="btn btn-primary btn-block"
+              className="submit"
               style={{ marginLeft: "400px", width: "100px", height: "50px" }}
             >
               Submit

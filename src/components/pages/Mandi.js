@@ -1,9 +1,10 @@
 import React from "react";
 import { AgGridReact } from "ag-grid-react";
-import Modal from "react-bootstrap/Modal";
+
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import axios from "axios";
+import "./Aggrid.css";
 import Mandii from "../styles/Mandii.css";
 
 import Carousel from "../layout/Carousel";
@@ -18,52 +19,26 @@ const Mandi = () => {
     {
       headerName: "STATE",
       field: "STATE",
-      sortable: true,
-      editable: true,
-      filter: true,
-      // checkboxSelection: true,
-      floatingFilter: true,
-      flex: 1,
     },
     {
       headerName: "DIST",
       field: "DIST",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "MARKET",
       field: "MARKET",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "GODOWN",
       field: "GODOWN",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "COLDSTORAGE",
       field: "COLDSTORAGE",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "RAILWAY",
       field: "RAILWAY",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "Action",
@@ -71,7 +46,7 @@ const Mandi = () => {
         <div>
           <button
             onClick={() => cellDeleteing(params)}
-            className="btn btn-danger"
+            className="delete"
           >
             Delete
           </button>
@@ -80,11 +55,19 @@ const Mandi = () => {
       ),
     },
   ];
+  const defaultColDef = {
+    sortable: true,
+    editable: true,
+    flex: 1,
+    filter: true,
+    floatingFilter: true,
+    minWidth: 120,
+  };
   let id;
   const UpadateFunction = (resp) => {
     console.log(resp);
     id = resp.data._id;
-    alert("Do you want to update your data?🙄🙄")
+    alert("Do you want to update your data?🙄🙄");
   };
 
   const cellEditing = (resp) => {
@@ -96,11 +79,11 @@ const Mandi = () => {
   };
   const cellDeleteing = (resp) => {
     resp.api.applyTransaction({
-      remove:[resp.node.data]
-    })
+      remove: [resp.node.data],
+    });
     id = resp.data._id;
     axios.delete(`http://localhost:3000/api/mandi/${id}`, resp.data);
-    alert("your data has been deleted")
+    alert("your data has been deleted");
   };
 
   return (
@@ -110,14 +93,15 @@ const Mandi = () => {
       <h1> Currently Available Mandi's</h1>
       <br />
       <div
-        className="ag-theme-alpine  container table-responsive-sm"
+        className="ag-theme-alpine manage-table
+        container table-responsive-sm"
         style={{
           height: "500px",
-          width: "1500px",
         }}
       >
         <AgGridReact
           columnDefs={columns}
+          defaultColDef={defaultColDef}
           onGridReady={onGridReady}
           pagination={true}
           paginationPageSize={10}

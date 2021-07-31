@@ -3,7 +3,7 @@ import Help from "../styles/Help.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-
+import "./Aggrid.css";
 import Carousel from "../layout/Carousel";
 
 const Helplines = () => {
@@ -18,22 +18,21 @@ const Helplines = () => {
     {
       headerName: "TITLE",
       field: "title",
-      sortable: true,
-      editable: true,
-      filter: true,
-
-      floatingFilter: true,
-      flex: "1",
     },
     {
       headerName: "DETAILS",
       field: "details",
-      sortable: true,
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
   ];
+
+  const defaultColDef = {
+    sortable: true,
+    editable: true,
+    flex: 1,
+    filter: true,
+    floatingFilter: true,
+    minWidth: 120,
+  };
 
   return (
     <div>
@@ -55,18 +54,20 @@ const Helplines = () => {
       </div>
 
       <div
-        className="ag-theme-alpine  container table-responsive-sm"
+        className="ag-theme-alpine manage-table
+         container table-responsive-sm"
         style={{
           height: "500px",
-          width: "1500px",
         }}
       >
         <AgGridReact
           columnDefs={columns}
+          defaultColDef={defaultColDef}
           onGridReady={onGridReady}
           pagination={true}
           paginationPageSize={10}
           paginationAutoPageSize={true}
+          height="350px"
         />
       </div>
       <br />

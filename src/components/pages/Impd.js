@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Aggrid.css";
 import axios from "axios";
 import Imp from "../styles/Imp.css";
 import { AgGridReact } from "ag-grid-react";
@@ -18,54 +18,30 @@ const ImportantAddress = () => {
     {
       headerName: "STATE",
       field: "STATE",
-
-      editable: true,
-
-      flex: 1,
     },
     {
       headerName: "DIST",
       field: "dist",
-
-      editable: true,
     },
     {
       headerName: "OFFICE ADDRESS",
       field: "Office_Address",
-
-      editable: true,
     },
     {
       headerName: "NO OF STAFF",
       field: "No_of_Staff",
-
-      editable: true,
-      filter: true,
-      floatingFilter: true,
     },
     {
       headerName: "TELEPHONE",
       field: "TelePhone",
-      // sortable: true,
-      editable: true,
-      // filter: true,
-      // floatingFilter: true,
     },
     {
       headerName: "SOIL EQUIPMENT",
       field: "Soil_Equipment",
-      // sortable: true,
-      editable: true,
-      // filter: true,
-      // floatingFilter: true,
     },
     {
       headerName: "SOIL TEST NUMBER",
       field: "Soil_Test_No",
-      // sortable: true,
-      editable: true,
-      // filter: true,
-      // floatingFilter: true,
     },
 
     {
@@ -74,7 +50,7 @@ const ImportantAddress = () => {
         <div>
           <button
             onClick={() => cellDeleteing(params)}
-            className="btn btn-danger"
+            className="delete"
           >
             Delete
           </button>
@@ -83,12 +59,20 @@ const ImportantAddress = () => {
       ),
     },
   ];
+  const defaultColDef = {
+    sortable: true,
+    editable: true,
+    flex: 1,
+    filter: true,
+    floatingFilter: true,
+    minWidth: 120,
+  };
 
   let id;
   const UpadateFunction = (resp) => {
     console.log(resp);
     id = resp.data._id;
-    alert("Do you want to update tour data?🙄🙄")
+    alert("Do you want to update tour data?🙄🙄");
   };
 
   const cellEditing = (resp) => {
@@ -101,8 +85,8 @@ const ImportantAddress = () => {
   const cellDeleteing = (resp) => {
     id = resp.data._id;
     resp.api.applyTransaction({
-      remove:[resp.node.data]
-    })
+      remove: [resp.node.data],
+    });
     axios.delete(`http://localhost:3000/api/soil/${id}`, resp.data);
     alert("your data has been Deleted 🙂☺ ");
   };
@@ -116,17 +100,18 @@ const ImportantAddress = () => {
         className="ag-theme-alpine "
         style={{
           height: "500px",
-          width: "1500px",
         }}
       >
         <AgGridReact
           columnDefs={columns}
+          defaultColDef={defaultColDef}
           onGridReady={onGridReady}
           pagination={true}
           paginationPageSize={10}
           paginationAutoPageSize={true}
           onRowDoubleClicked={UpadateFunction}
           onCellEditingStopped={cellEditing}
+          height="350px"
         />
       </div>
     </div>

@@ -27,3 +27,17 @@ input[type=submit] {
       margin-top: 0;
     }
   }  
+  h2{
+    color: "#eb2f06"
+  }
+  span{
+    color: "red";
+     font-size: "20px" 
+  }
+  .submit{
+    background-color: #3c40c6;
+    margin-left: 400px;
+    width: 100px;
+    height: 50px;
+    
+  }
