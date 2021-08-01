@@ -1,5 +1,5 @@
 import React from "react";
-import Help from "../styles/Help.css";
+import help from "../styles/help.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";

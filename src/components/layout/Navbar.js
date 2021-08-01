@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import Nav from '../styles/Nav.css'
+import { Link } from 'react-router-dom';
+//   import Nav from '../styles/Nav.css'
 import Dropdown from "react-bootstrap/Dropdown";
- import { NavDropdown, Nav, Navbar, NavLink } from "react-bootstrap";
+
+
+import { NavDropdown, Nav, Navbar, NavLink } from "react-bootstrap";
+
+
 const Navbar1 = () => {
+    
   return (
+      
 
     // My code
     // <div>
@@ -252,19 +258,7 @@ const Navbar1 = () => {
 
 
 
-//w3school code
 
-
-
-//     <div className="topnav" id="myTopnav">
-//   <NavLink exact to="/">Home</NavLink>
-//   <NavLink exact to="/help">Helplines</NavLink>
-//   <NavLink exact to="/mandi">Mandi</NavLink>
-//   <NavLink exact to="/Impd">ImportantAddress</NavLink>
-//   <NavLink exact to="/schemes">Schemes</NavLink>
-//   <NavLink exact to="/contactus">ContactUs</NavLink>
-//   <NavLink exact to="/about">About</NavLink>
-// </div>
 
 
 
@@ -274,16 +268,17 @@ const Navbar1 = () => {
 
 <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="/" style={{ color: 'white ' }}> <b>Home</b> </Navbar.Brand>
+                    <Navbar.Brand href="/" style={{ color: 'white ' }}></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <NavLink href="/help" style={{ color: 'white ' }}> <b>Helplines</b> </NavLink>
-                            <Nav.Link href="/mandi" style={{ color: 'white ' }}><b>Mandi</b></Nav.Link>
-                            <Nav.Link href="/Impd" style={{ color: 'white ' }}><b>ImportantAddres</b></Nav.Link>
-                            <Nav.Link href="/schemes" style={{ color: 'white ' }}><b>Schemes</b></Nav.Link>
-                            <Nav.Link href="/contactus" style={{ color: 'white ' }}><b>ContactUs</b></Nav.Link>
-                            <Nav.Link href="/about" style={{ color: 'white ' }}><b>About</b></Nav.Link>
+                        <Nav.Link as= {Link} to="/" style={{ color: 'white ' }}> <b>Home</b> </Nav.Link>
+                            <Nav.Link as= {Link} to="/help" style={{ color: 'white ' }}> <b>Helplines</b> </Nav.Link>
+                            <Nav.Link as= {Link} to="/mandi" style={{ color: 'white ' }}><b>Mandi</b></Nav.Link>
+                            <Nav.Link as= {Link} to="/Impd" style={{ color: 'white ' }}><b>ImportantAddres</b></Nav.Link>
+                            <Nav.Link as= {Link} to="/schemes" style={{ color: 'white ' }}><b>Schemes</b></Nav.Link>
+                            <Nav.Link  as= {Link} to="/contactus" style={{ color: 'white ' }}><b>ContactUs</b></Nav.Link>
+                            <Nav.Link as= {Link} to="/about" style={{ color: 'white ' }}><b>About</b></Nav.Link>
                             <NavDropdown title="Crops" id="collasible-nav-dropdown" style={{ color: 'white ' }}>
                                 <NavDropdown.Item href="/Rabi" style={{ color: 'black ' }}><b>Rabi</b></NavDropdown.Item>
                                 <NavDropdown.Item href="/Khareef" style={{ color: 'black ' }}><b>Khareef</b></NavDropdown.Item>
@@ -299,8 +294,12 @@ const Navbar1 = () => {
 
 
 
-  
 
+
+      
+    
+      
+   
   );
 };
 
