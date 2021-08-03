@@ -45,6 +45,7 @@ const Navbar1 = () => {
         </ul>
       </nav>
     </body>
+    
   );
 };
 
