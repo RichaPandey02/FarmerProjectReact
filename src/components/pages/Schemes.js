@@ -48,11 +48,11 @@ const Schemes = () => {
           <button
             onClick={() => cellDeleteing(params)}
             style={{ color: "white" }}
-            className="delete"
+            className="delete-Schemes"
           >
             Delete
           </button>
-          {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+          
         </div>
       ),
     },
@@ -106,7 +106,7 @@ const Schemes = () => {
             Shemes Available For Market Price
           </h1>
 
-          <h5 data-testid="testcase">
+          {/* <h5 data-testid="testcase">
             Minimum Support Price (MSP) is a form of market intervention by the
             Government of India to insure agricultural producers against any
             sharp fall in farm prices. The minimum support prices are announced
@@ -122,13 +122,13 @@ const Schemes = () => {
             minimum price due to bumper production and glut in the market,
             government agencies purchase the entire quantity offered by the
             farmers at the announced minimum price.
-          </h5>
+          </h5> */}
         </section>
         <br />
         <button
           onClick={() => onExportClick()}
-          style={{ color: "white" }}
-          className="export"
+          // style={{ color: "white" }}
+          className="export-btn"
         >
           export
         </button>
@@ -137,9 +137,9 @@ const Schemes = () => {
         <div
           className="ag-theme-alpine manage-table
           container table-responsive-sm"
-          style={{
-            height: "500px",
-          }}
+          // style={{
+          //   height: "500px",
+          // }}
         >
           <AgGridReact
             columnDefs={columns}

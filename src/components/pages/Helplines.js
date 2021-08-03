@@ -38,11 +38,11 @@ const Helplines = () => {
     <div>
       <Carousel />
       <section></section>
-      <div id="about-para">
+      <div className="about-para">
         <br />
         <h1>Wanna help...Please Call Us 😊😊</h1>
 
-        <h5 data-testid="testcase" className="help">
+        {/* <h5 data-testid="testcase" className="about-para__help">
           Bharat Sarkar has started a Kisan Call Center for the support of the
           farmers, whose farmers and farmers can avail the benefits and
           information of the services related to the crop seed, by calling the
@@ -50,7 +50,7 @@ const Helplines = () => {
           the help in the country. States have started for farmers, on which
           farmers can get information related to their problems and agriculture
           by calling.
-        </h5>
+        </h5> */}
       </div>
 
       <div

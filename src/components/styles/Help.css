@@ -4,8 +4,10 @@ h1{
 h5{
     color:'#eb2f06'
 }
-.help{
-    color: black;
-    font-size: 20px;
-    font-style:inherit
-}
+
+#about-para h1{
+    margin-left: "78%";
+  }
+  .ag-theme-alpine{
+height: 500px;
+  }

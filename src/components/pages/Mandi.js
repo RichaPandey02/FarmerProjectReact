@@ -46,11 +46,11 @@ const Mandi = () => {
         <div>
           <button
             onClick={() => cellDeleteing(params)}
-            className="delete"
+            className="deleteMandi"
           >
             Delete
           </button>
-          {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+          
         </div>
       ),
     },
@@ -95,9 +95,9 @@ const Mandi = () => {
       <div
         className="ag-theme-alpine manage-table
         container table-responsive-sm"
-        style={{
-          height: "500px",
-        }}
+        // style={{
+        //   height: "500px",
+        // }}
       >
         <AgGridReact
           columnDefs={columns}

@@ -1,8 +1,11 @@
-h1{
-    text-align: center;
-    color:'#eb2f06'
+h1 {
+  text-align: center;
+  color: "#eb2f06";
 }
-.delete {
-    background-color: #ff3838;
-    width: 80px;
-  }
+.deleteMandi {
+  background-color: #ff3838;
+  width: 80px;
+}
+.ag-theme-alpine {
+  height: 500px;
+}

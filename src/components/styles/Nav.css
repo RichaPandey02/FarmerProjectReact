@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+nav {
+  background-color: black;
+}
+nav ul {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav ul li {
+  padding: 10px 20px;
+}
+nav ul li NavLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: Audiowide;
+}
+nav ul li:hover {
+  background-color: #015d56;
+  transition: 0.9s;
+}
+@media only screen and (max-width: 767px) {
+  nav ul {
+    height: 230px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.navbar {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: Audiowide;
+}

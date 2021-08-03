@@ -50,11 +50,11 @@ const ImportantAddress = () => {
         <div>
           <button
             onClick={() => cellDeleteing(params)}
-            className="delete"
+            className="deleteAddress"
           >
             Delete
           </button>
-          {/* <button onClick={()=>cellEditing(params)}  editType="fullRow" >update</button> */}
+          
         </div>
       ),
     },
@@ -98,9 +98,9 @@ const ImportantAddress = () => {
       <h1>SOIL TESTING LABS</h1>
       <div
         className="ag-theme-alpine "
-        style={{
-          height: "500px",
-        }}
+        // style={{
+        //   height: "500px",
+        // }}
       >
         <AgGridReact
           columnDefs={columns}
