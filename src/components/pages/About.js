@@ -2,10 +2,11 @@
 import React from "react";
 import Abt from "../styles/Abt.css"
 import Carousel from "../layout/Carousel";
+import Card from "./Card";
 const About = () => {
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
       <div className="wrapper">
         <div>
         <i className="material-icons brand-icon" data-testid="testcase" >agriculture</i> 

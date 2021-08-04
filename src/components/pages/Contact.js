@@ -3,6 +3,8 @@ import cnt from "../styles/cnt.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Carousel from "../layout/Carousel";
+import Card from "./Card";
+
 const Contact = () => {
   let history = useHistory();
   const [user, setUser] = useState({});
@@ -51,7 +53,8 @@ const Contact = () => {
 
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
+      <Card/>
       <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4" >

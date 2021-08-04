@@ -3,7 +3,7 @@ h1{
     text-align: center;
 }
 h5{
-    font-family: 'Lucida Console", "Courier New", monospace';
+    /* font-family: 'Lucida Console", "Courier New", monospace'; */
 }
 .wrapper{
     height: "150px"

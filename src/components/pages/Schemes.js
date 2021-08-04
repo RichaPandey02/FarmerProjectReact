@@ -7,6 +7,7 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import "./Aggrid.css";
 import schemee from "../styles/schemee.css";
+import Card from "./Card";
 
 const Schemes = () => {
   const rowStyle = {
@@ -98,7 +99,8 @@ const Schemes = () => {
   return (
     <div>
       <div>
-        <Carousel />
+        {/* <Carousel /> */}
+        <Card/>
 
         <section>
           <h1>

@@ -1,5 +1,6 @@
-.footer {
+.footer__listitem {
   position: relative;
+
   height: 200px;
   left: 0;
   bottom: 0;
@@ -8,6 +9,10 @@
   color: white;
   text-align: center;
 }
-.footer__heading{
+.footer__listitem--heading {
   color: white;
+}
+.footer {
+  margin-left: 20px;
+  margin-right: 20px;
 }

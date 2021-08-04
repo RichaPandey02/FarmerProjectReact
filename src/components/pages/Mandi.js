@@ -5,6 +5,7 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import axios from "axios";
 import "./Aggrid.css";
+import Card from "./Card";
 import Mandii from "../styles/Mandii.css";
 
 import Carousel from "../layout/Carousel";
@@ -88,7 +89,8 @@ const Mandi = () => {
 
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
+      <Card/>
       <br />
       <h1> Currently Available Mandi's</h1>
       <br />

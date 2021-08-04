@@ -4,7 +4,7 @@ import Nav from "../styles/Nav.css";
 
 const Navbar1 = () => {
   return (
-    <body>
+    <body className="navbody">
       <nav>
         <ul>
           <li>

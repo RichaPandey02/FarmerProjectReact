@@ -128,9 +128,9 @@ const Carousel1 = () => {
 
       <div id="slider">
 					  <figure>
-						    <img src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701663711.jpg"></img>
-						    <img src="https://lh3.googleusercontent.com/proxy/MHqFKXRFs_tO8bvgaEs8cQbQfz25SwgjFuHS5Zg2pLdL4bsecqCijocQkR8IaLpNN6bHg34z718HVTM6Vx3Ynsg7NCfRTbMQvk0mhYNsqxUV-Dtq6PjnKZerdSUfzub6kSyU"></img>
-						    <img src="https://wallpaperaccess.com/full/1541457.jpg"></img>
+						    <img src="https://cdn.wallpapersafari.com/67/5/3Rezuw.jpg"></img>
+						    <img src="https://i.pinimg.com/originals/22/41/19/224119dd1f959bbd537b731d26af5142.jpg"></img>
+						    <img src="https://i0.wp.com/countrysquire.co.uk/wp-content/uploads/2020/05/ssassew.jpg?fit=1332%2C850&ssl=1"></img>
 					  </figure>
 				</div>
       

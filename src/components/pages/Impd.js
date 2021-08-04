@@ -6,7 +6,12 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Carousel from "../layout/Carousel";
+import Card from "./Card";
 const ImportantAddress = () => {
+  const rowStyle = {
+    background: "transparent",
+    color: "black",
+  };
   const onGridReady = (params) => {
     console.log("grid is ready");
     fetch("http://localhost:3000/api/SoilSchema")
@@ -31,10 +36,10 @@ const ImportantAddress = () => {
       headerName: "NO OF STAFF",
       field: "No_of_Staff",
     },
-    {
-      headerName: "TELEPHONE",
-      field: "TelePhone",
-    },
+    // {
+    //   headerName: "TELEPHONE",
+    //   field: "TelePhone",
+    // },
     {
       headerName: "SOIL EQUIPMENT",
       field: "Soil_Equipment",
@@ -93,11 +98,13 @@ const ImportantAddress = () => {
 
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
+      <Card/>
       <br />
-      <h1>SOIL TESTING LABS</h1>
+      <h1>Soil Testing Labs</h1>
       <div
-        className="ag-theme-alpine "
+        className="ag-theme-alpine manage-table
+        container table-responsive-sm "
         // style={{
         //   height: "500px",
         // }}
