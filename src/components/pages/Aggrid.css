@@ -2,7 +2,7 @@
   /* for heading name color */
   --ag-foreground-color: black;
   /* for table background color  */
-  --ag-background-color: white;
+  --ag-background-color: #f5f6fa;
 }
 .ag-theme-alpine .ag-header {
   background-color: transparent;

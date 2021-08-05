@@ -7,13 +7,17 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import "./Aggrid.css";
 import schemee from "../styles/schemee.css";
+import Footer from "../layout/Footer"
 import Card from "./Card";
 
 const Schemes = () => {
   const rowStyle = {
     background: "transparent",
-    color: "black",
+    color: "#192a56",
+    
   };
+  const cellStyle= {textAlign: 'center'}
+  
   let gridApi;
   const onGridReady = (params) => {
     fetch("http://localhost:3000/api/schemeSchema")
@@ -66,6 +70,7 @@ const Schemes = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
+    cellClass: "grid-cell-centered"
   };
 
   let id;
@@ -126,7 +131,7 @@ const Schemes = () => {
             farmers at the announced minimum price.
           </h5> */}
         </section>
-        <br />
+        
         <button
           onClick={() => onExportClick()}
           // style={{ color: "white" }}
@@ -134,8 +139,8 @@ const Schemes = () => {
         >
           export
         </button>
-        <br />
-        <br />
+       
+        
         <div
           className="ag-theme-alpine manage-table
           container table-responsive-sm"
@@ -154,9 +159,13 @@ const Schemes = () => {
             onCellEditingStopped={cellEditing}
             height="350px"
             rowStyle={rowStyle}
+            
           />
         </div>
       </div>
+      <br></br>
+      <br></br>
+      <Footer/>
     </div>
   );
 };

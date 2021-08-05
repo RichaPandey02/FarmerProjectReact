@@ -15,4 +15,8 @@ h1 {
 .ag-theme-alpine{
   height: 500px;
   
+  
+}
+.grid-cell-centered {
+  text-align: center;
 }

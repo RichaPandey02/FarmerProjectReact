@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
   color: "#eb2f06";
+  text-transform: capitalize;
 }
 .deleteMandi {
   background-color: #ff3838;

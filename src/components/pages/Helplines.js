@@ -5,9 +5,15 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Card from "./Card";
 import "./Aggrid.css";
-import Carousel from "../layout/Carousel";
+import Footer from "../layout/Footer";
+// import Carousel from "../layout/Carousel";
 
 const Helplines = () => {
+  const rowStyle = {
+    background: "transparent",
+    color: "#192a56",
+  };
+
   const onGridReady = (params) => {
     console.log("grid is ready");
     fetch("http://localhost:3000/api/HelplineSchema")
@@ -33,13 +39,16 @@ const Helplines = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
+    cellClass: "grid-cell-centered",
+    
+    rowStyle: { rowStyle },
   };
 
   return (
     <div>
       {/* <Carousel />  */}
-      <Card/>
-      
+      <Card />
+
       <section></section>
       <div className="about-para">
         <br />
@@ -47,7 +56,8 @@ const Helplines = () => {
         <br></br>
 
         <h5 data-testid="testcase" className="about-para__help">
-          Bharat Sarkar has started a Kisan Call Center for the support of the farmers
+          Bharat Sarkar has started a Kisan Call Center for the support of the
+          farmers.
           {/* farmers, whose farmers and farmers can avail the benefits and
           information of the services related to the crop seed, by calling the
           helpline number of the country, these farmers call centers can get all
@@ -56,7 +66,7 @@ const Helplines = () => {
           by calling. */}
         </h5>
       </div>
-<br></br>
+      <br></br>
       <div
         className="ag-theme-alpine manage-table
          container table-responsive-sm"
@@ -72,10 +82,12 @@ const Helplines = () => {
           paginationPageSize={10}
           paginationAutoPageSize={true}
           height="350px"
+          rowStyle={rowStyle}
         />
       </div>
       <br />
       <br />
+      <Footer />
     </div>
   );
 };

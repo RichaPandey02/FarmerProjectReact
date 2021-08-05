@@ -37,15 +37,20 @@ const Navbar1 = () => {
               ContactUs
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink className="navbar" exact to="/about">
               About
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </body>
     
+
+
+
+
+   
   );
 };
 

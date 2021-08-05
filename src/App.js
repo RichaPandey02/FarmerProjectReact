@@ -50,7 +50,7 @@ function App() {
         <Route exact path="/Khareef" component={Khareef} /> 
         <Route component={NotFound} /> 
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   </Router>
   );

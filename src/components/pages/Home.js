@@ -1,11 +1,12 @@
 import React from "react";
 import Carousel from "../layout/Carousel";
 import HOme from "../styles/HOme.css";
+import Footer from "../layout/Footer"
 const Home = () => {
   return (
     <div>
       <Carousel />
-      <section id="education">
+      {/* <section id="education">
         <div id="about-para">
           <br />
 
@@ -168,7 +169,8 @@ const Home = () => {
             widely used, although some are banned in certain countries.
           </p>
         </div>
-      </section>
+      </section> */}
+      
          </div>
   );
 };

@@ -7,9 +7,14 @@ import axios from "axios";
 import "./Aggrid.css";
 import Card from "./Card";
 import Mandii from "../styles/Mandii.css";
+import Footer from "../layout/Footer"
 
 import Carousel from "../layout/Carousel";
 const Mandi = () => {
+  const rowStyle = {
+    background: "transparent",
+    color: "#192a56",
+  };
   const onGridReady = (params) => {
     console.log("grid is ready");
     fetch("http://localhost:3000/api/mandischema")
@@ -42,7 +47,7 @@ const Mandi = () => {
       field: "RAILWAY",
     },
     {
-      headerName: "Action",
+      headerName: "ACTION",
       cellRendererFramework: (params) => (
         <div>
           <button
@@ -63,6 +68,7 @@ const Mandi = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
+    cellClass: "grid-cell-centered"
   };
   let id;
   const UpadateFunction = (resp) => {
@@ -110,8 +116,12 @@ const Mandi = () => {
           paginationAutoPageSize={true}
           onRowDoubleClicked={UpadateFunction}
           onCellEditingStopped={cellEditing}
+          rowStyle={rowStyle}
         />
       </div>
+      <br></br>
+      <br></br>
+      <Footer/>
     </div>
   );
 };

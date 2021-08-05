@@ -7,10 +7,11 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Carousel from "../layout/Carousel";
 import Card from "./Card";
+import Footer from "../layout/Footer"
 const ImportantAddress = () => {
   const rowStyle = {
     background: "transparent",
-    color: "black",
+    color: "#192a56",
   };
   const onGridReady = (params) => {
     console.log("grid is ready");
@@ -59,7 +60,6 @@ const ImportantAddress = () => {
           >
             Delete
           </button>
-          
         </div>
       ),
     },
@@ -71,6 +71,7 @@ const ImportantAddress = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
+    cellClass: "grid-cell-centered"
   };
 
   let id;
@@ -99,9 +100,10 @@ const ImportantAddress = () => {
   return (
     <div>
       {/* <Carousel /> */}
-      <Card/>
+      <Card />
       <br />
       <h1>Soil Testing Labs</h1>
+      <br></br>
       <div
         className="ag-theme-alpine manage-table
         container table-responsive-sm "
@@ -119,8 +121,13 @@ const ImportantAddress = () => {
           onRowDoubleClicked={UpadateFunction}
           onCellEditingStopped={cellEditing}
           height="350px"
+          rowStyle={rowStyle}
         />
       </div>
+      <br></br>
+      <br>
+      </br>
+      <Footer/>
     </div>
   );
 };

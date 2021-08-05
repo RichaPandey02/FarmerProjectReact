@@ -2,11 +2,14 @@ import React from "react";
 import Carousel from "react-grid-carousel";
  import carousl from "../styles/carousl.css";
  import $ from 'jquery';
+ 
 
 
  
 
 const Carousel1 = () => {
+  
+
 //   var slides = document.querySelectorAll(".slide");
 // var dots = document.querySelectorAll(".dot");
 // var index = 0;
@@ -126,13 +129,96 @@ const Carousel1 = () => {
 
 
 
-      <div id="slider">
-					  <figure>
-						    <img src="https://cdn.wallpapersafari.com/67/5/3Rezuw.jpg"></img>
-						    <img src="https://i.pinimg.com/originals/22/41/19/224119dd1f959bbd537b731d26af5142.jpg"></img>
-						    <img src="https://i0.wp.com/countrysquire.co.uk/wp-content/uploads/2020/05/ssassew.jpg?fit=1332%2C850&ssl=1"></img>
-					  </figure>
-				</div>
+      // <div id="slider">
+			// 		  <figure>
+			// 			    <img src="https://cdn.wallpapersafari.com/67/5/3Rezuw.jpg"></img>
+			// 			    <img src="https://i.pinimg.com/originals/22/41/19/224119dd1f959bbd537b731d26af5142.jpg"></img>
+			// 			    <img src="https://i0.wp.com/countrysquire.co.uk/wp-content/uploads/2020/05/ssassew.jpg?fit=1332%2C850&ssl=1"></img>
+			// 		  </figure>
+			// 	</div>
+
+
+<div>
+<h1>Farmer's Friend</h1>
+
+<p>If we grow more food, there will be enough food to feed everyone</p>
+    <div div className="carousel">
+<section id= "slider">
+
+  
+  <input type= "radio" name="slider" id= "slide-1-radio" checked />
+  <input type= "radio" name="slider" id= "slide-2-radio" />
+  <input type= "radio" name="slider" id= "slide-3-radio" />
+  
+  <div class= "slides">
+    <div class= "slide">
+      <a href= "#"><img src= "https://www.fairobserver.com/wp-content/uploads/2019/02/Farmer-suicides-Indian-farmers-Indian-news-India-1.jpg" alt="slide-1" /></a>
+    </div>
+    <div class= "slide">
+      <a href= "#"><img src= "https://images.outlookindia.com/public/uploads/articles/2019/12/7/paddy_farmer20140730_571_855.jpg" alt="slide-1" /></a>
+    </div>
+    <div class= "slide">
+      <a href= "#"><img src= "https://images.outlookindia.com/public/uploads/articles/2019/12/7/paddy_farmer20140730_571_855.jpg" alt="slide-1" /></a>
+    </div>
+  </div>
+ 
+  <div class="prev-arrow arrow">
+    <label for= "slide-1-radio" id= "prev-1-arrow">
+       <i class= "fa fa-arrow-left"></i> 
+      <span class= "thumb">
+         <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499938951/banner-2_gl3fir.jpg" alt="slide-1-thumb" /> 
+      </span>
+    </label>
+    <label for= "slide-2-radio" id= "prev-2-arrow">
+      <i class= "fa fa-arrow-left"></i>
+      <span class= "thumb">
+        <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499939039/banner-4_gdy1qw.jpg" alt="slide-2-thumb" />
+      </span>
+    </label>
+    <label for= "slide-3-radio" id= "prev-3-arrow">
+      {/* <i class= "fa fa-arrow-left"></i> */}
+      <span class="material-icons brand-icon">
+arrow_right_alt
+</span>
+      <span class= "thumb">
+        {/* <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499939087/banner-1_rlnwku.jpg" alt="slide-3-thumb" /> */}
+      </span>
+    </label>
+  </div>
+  
+  <div class="next-arrow arrow">
+    <label for= "slide-1-radio" id= "next-1-arrow">
+      {/* <i class= "fa fa-arrow-right"></i> */}
+      <span class= "thumb">
+        <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499938951/banner-2_gl3fir.jpg" alt="slide-1-thumb" />
+      </span>
+    </label>
+    <label for= "slide-2-radio" id= "next-2-arrow">
+      {/* <i class= "fa fa-arrow-right"></i> */}
+      {/* <i className="material-icons brand-icon" >arrow_left_alt</i>  */}
+      <span class="material-icons brand-icon">
+arrow_right_alt
+</span>
+
+      
+      <span class= "thumb">
+        {/* <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499939039/banner-4_gdy1qw.jpg" alt="slide-2-thumb" /> */}
+      </span>
+    </label>
+    <label for= "slide-3-radio" id= "next-3-arrow">
+      <i class= "fa fa-arrow-right"></i>
+      <span class= "thumb">
+        <img src= "http://res.cloudinary.com/hurricane10/image/upload/v1499939087/banner-1_rlnwku.jpg" alt="slide-3-thumb" />
+      </span>
+    </label>
+  </div>
+  
+</section>
+</div>
+</div>
+
+
+
       
    
 
