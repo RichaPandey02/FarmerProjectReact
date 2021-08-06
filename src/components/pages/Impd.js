@@ -5,9 +5,9 @@ import Imp from "../styles/Imp.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-import Carousel from "../layout/Carousel";
+
 import Card from "./Card";
-import Footer from "../layout/Footer"
+import Footer from "../layout/Footer";
 const ImportantAddress = () => {
   const rowStyle = {
     background: "transparent",
@@ -37,10 +37,7 @@ const ImportantAddress = () => {
       headerName: "NO OF STAFF",
       field: "No_of_Staff",
     },
-    // {
-    //   headerName: "TELEPHONE",
-    //   field: "TelePhone",
-    // },
+
     {
       headerName: "SOIL EQUIPMENT",
       field: "Soil_Equipment",
@@ -71,7 +68,7 @@ const ImportantAddress = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
-    cellClass: "grid-cell-centered"
+    cellClass: "grid-cell-centered",
   };
 
   let id;
@@ -99,7 +96,6 @@ const ImportantAddress = () => {
 
   return (
     <div>
-      {/* <Carousel /> */}
       <Card />
       <br />
       <h1>Soil Testing Labs</h1>
@@ -107,9 +103,6 @@ const ImportantAddress = () => {
       <div
         className="ag-theme-alpine manage-table
         container table-responsive-sm "
-        // style={{
-        //   height: "500px",
-        // }}
       >
         <AgGridReact
           columnDefs={columns}
@@ -125,9 +118,8 @@ const ImportantAddress = () => {
         />
       </div>
       <br></br>
-      <br>
-      </br>
-      <Footer/>
+      <br></br>
+      <Footer />
     </div>
   );
 };

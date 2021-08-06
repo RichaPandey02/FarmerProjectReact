@@ -7,9 +7,8 @@ import axios from "axios";
 import "./Aggrid.css";
 import Card from "./Card";
 import Mandii from "../styles/Mandii.css";
-import Footer from "../layout/Footer"
+import Footer from "../layout/Footer";
 
-import Carousel from "../layout/Carousel";
 const Mandi = () => {
   const rowStyle = {
     background: "transparent",
@@ -50,13 +49,9 @@ const Mandi = () => {
       headerName: "ACTION",
       cellRendererFramework: (params) => (
         <div>
-          <button
-            onClick={() => cellDeleteing(params)}
-            className="deleteMandi"
-          >
+          <button onClick={() => cellDeleteing(params)} className="deleteMandi">
             Delete
           </button>
-          
         </div>
       ),
     },
@@ -68,7 +63,7 @@ const Mandi = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
-    cellClass: "grid-cell-centered"
+    cellClass: "grid-cell-centered",
   };
   let id;
   const UpadateFunction = (resp) => {
@@ -95,17 +90,13 @@ const Mandi = () => {
 
   return (
     <div>
-      {/* <Carousel /> */}
-      <Card/>
+      <Card />
       <br />
       <h1> Currently Available Mandi's</h1>
       <br />
       <div
         className="ag-theme-alpine manage-table
         container table-responsive-sm"
-        // style={{
-        //   height: "500px",
-        // }}
       >
         <AgGridReact
           columnDefs={columns}
@@ -121,7 +112,7 @@ const Mandi = () => {
       </div>
       <br></br>
       <br></br>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

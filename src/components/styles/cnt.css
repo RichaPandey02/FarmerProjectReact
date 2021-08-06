@@ -10,6 +10,9 @@ input[type=submit] {
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    /* font-weight: bold; */
   }
   input[type=text], select, textarea {
     width: 100%;
@@ -55,7 +58,7 @@ input[type=submit] {
     
   }
   .submit{
-    background-color: #3c40c6;
+    background-color: green;
     margin-left: 100px; 
     width: 100px;
     height: 50px;

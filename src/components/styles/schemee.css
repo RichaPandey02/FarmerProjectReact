@@ -1,21 +1,20 @@
-.delete-Schemes{
+.delete-Schemes {
   background-color: #ff3838;
   width: 80px;
+  color: white;
 }
 
 h1 {
-  color: #ff3838;
+  color: #EA2027;
   text-align: center;
 }
 
-.export-btn{
+.export-btn {
   background-color: green;
   color: white;
 }
-.ag-theme-alpine{
+.ag-theme-alpine {
   height: 500px;
-  
-  
 }
 .grid-cell-centered {
   text-align: center;

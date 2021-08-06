@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../styles/Footer.css";
 const Footerpage = () => {
   return (
-    <body className="footer">
+    <body className="footer" id="footer">
     <div className="footer__listitem">
       <h5 className="footer__listitem--heading">Get In touch</h5>
       <p className="footer__listitem--heading">Farmers Friend 👩‍👩‍👧</p>
@@ -11,6 +11,11 @@ const Footerpage = () => {
       <p className="footer__listitem--heading">richapandey0297@gmail.com</p>
     </div>
     </body>
+
+
+
+    
+   
   );
 };
 export default Footerpage;

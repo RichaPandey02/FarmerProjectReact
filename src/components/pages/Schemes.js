@@ -1,23 +1,22 @@
 import React from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel from "../layout/Carousel";
+
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import "./Aggrid.css";
 import schemee from "../styles/schemee.css";
-import Footer from "../layout/Footer"
+import Footer from "../layout/Footer";
 import Card from "./Card";
 
 const Schemes = () => {
   const rowStyle = {
     background: "transparent",
     color: "#192a56",
-    
   };
-  const cellStyle= {textAlign: 'center'}
-  
+  const cellStyle = { textAlign: "center" };
+
   let gridApi;
   const onGridReady = (params) => {
     fetch("http://localhost:3000/api/schemeSchema")
@@ -52,12 +51,10 @@ const Schemes = () => {
         <div>
           <button
             onClick={() => cellDeleteing(params)}
-            style={{ color: "white" }}
             className="delete-Schemes"
           >
             Delete
           </button>
-          
         </div>
       ),
     },
@@ -70,7 +67,7 @@ const Schemes = () => {
     filter: true,
     floatingFilter: true,
     minWidth: 120,
-    cellClass: "grid-cell-centered"
+    cellClass: "grid-cell-centered",
   };
 
   let id;
@@ -104,49 +101,22 @@ const Schemes = () => {
   return (
     <div>
       <div>
-        {/* <Carousel /> */}
-        <Card/>
+        <Card />
 
         <section>
           <h1>
             <br />
             Shemes Available For Market Price
           </h1>
-
-          {/* <h5 data-testid="testcase">
-            Minimum Support Price (MSP) is a form of market intervention by the
-            Government of India to insure agricultural producers against any
-            sharp fall in farm prices. The minimum support prices are announced
-            by the Government of India at the beginning of the sowing season for
-            certain crops on the basis of the recommendations of the Commission
-            for Agricultural Costs and Prices (CACP). MSP is price fixed by
-            Government of India to protect the producer - farmers - against
-            excessive fall in price during bumper production years. The minimum
-            support prices are a guarantee price for their produce from the
-            Government. The major objectives are to support the farmers from
-            distress sales and to procure food grains for public distribution.
-            In case the market price for the commodity falls below the announced
-            minimum price due to bumper production and glut in the market,
-            government agencies purchase the entire quantity offered by the
-            farmers at the announced minimum price.
-          </h5> */}
         </section>
-        
-        <button
-          onClick={() => onExportClick()}
-          // style={{ color: "white" }}
-          className="export-btn"
-        >
-          export
+
+        <button onClick={() => onExportClick()} className="export-btn">
+          {/* export */}
         </button>
-       
-        
+
         <div
           className="ag-theme-alpine manage-table
           container table-responsive-sm"
-          // style={{
-          //   height: "500px",
-          // }}
         >
           <AgGridReact
             columnDefs={columns}
@@ -159,13 +129,12 @@ const Schemes = () => {
             onCellEditingStopped={cellEditing}
             height="350px"
             rowStyle={rowStyle}
-            
           />
         </div>
       </div>
       <br></br>
       <br></br>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

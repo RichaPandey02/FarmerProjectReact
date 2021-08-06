@@ -4,10 +4,10 @@ h1 {
   text-transform: capitalize;
 }
 .deleteAddress {
-  background-color: #ff3838;
+  background-color: #EA2027;
   width: 80px;
 }
 .ag-theme-alpine {
   height: 500px;
-  /* font-size: 20px !important; */
+  
 }

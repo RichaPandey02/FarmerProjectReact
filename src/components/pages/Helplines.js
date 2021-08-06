@@ -6,7 +6,6 @@ import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Card from "./Card";
 import "./Aggrid.css";
 import Footer from "../layout/Footer";
-// import Carousel from "../layout/Carousel";
 
 const Helplines = () => {
   const rowStyle = {
@@ -40,13 +39,12 @@ const Helplines = () => {
     floatingFilter: true,
     minWidth: 120,
     cellClass: "grid-cell-centered",
-    
+
     rowStyle: { rowStyle },
   };
 
   return (
     <div>
-      {/* <Carousel />  */}
       <Card />
 
       <section></section>
@@ -58,21 +56,12 @@ const Helplines = () => {
         <h5 data-testid="testcase" className="about-para__help">
           Bharat Sarkar has started a Kisan Call Center for the support of the
           farmers.
-          {/* farmers, whose farmers and farmers can avail the benefits and
-          information of the services related to the crop seed, by calling the
-          helpline number of the country, these farmers call centers can get all
-          the help in the country. States have started for farmers, on which
-          farmers can get information related to their problems and agriculture
-          by calling. */}
         </h5>
       </div>
       <br></br>
       <div
         className="ag-theme-alpine manage-table
-         container table-responsive-sm"
-        // style={{
-        //   height: "500px",
-        // }}
+         container table-responsive-sm "
       >
         <AgGridReact
           columnDefs={columns}

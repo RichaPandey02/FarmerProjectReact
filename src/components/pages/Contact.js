@@ -185,11 +185,12 @@ const Contact = () => {
           <h2 className="contact-form__text">CONTACT US👍😁 </h2>
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="form-group">
-              <h3>FullName:</h3>
+              <label id="fname" for="search">FullName:</label>
               <input
                 type="text"
                 placeholder="Enter Your FullName"
                 name="Fullname"
+                id="search"
                 value={Fullname}
                 onChange={(e) => onInputChange(e)}
               />
@@ -205,9 +206,10 @@ const Contact = () => {
             </div>
             <br />
             <div className="form-group">
-              <h3>Topic:</h3>
+              <label  id="fname2" for="search2">Topic:</label>
               <input
                 type="text"
+                id="search2"
                 placeholder="Enter Your Topic"
                 name="Topic"
                 value={Topic}
@@ -223,9 +225,10 @@ const Contact = () => {
             </div>
             <br />
             <div className="form-group">
-              <h3>Details</h3>
+              <label  id="fname1" for="search1">Details</label>
               <input
                 type="text"
+                id="search1"
                 placeholder="Enter Your Details"
                 name="Details"
                 value={Details}
