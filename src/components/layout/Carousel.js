@@ -142,7 +142,7 @@ const Carousel1 = () => {
 <h1>Farmer's Friend</h1>
 
 <p>If we grow more food, there will be enough food to feed everyone</p>
-    {/* <div div className="carousel"> */}
+    <div div className="carousel"> 
 <section id= "slider" className="carousel-slider">
 
   
