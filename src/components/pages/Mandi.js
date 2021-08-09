@@ -90,6 +90,7 @@ const Mandi = () => {
 
   return (
     <div>
+      <br/>
       <Card />
       <br />
       <h1> Currently Available Mandi's</h1>

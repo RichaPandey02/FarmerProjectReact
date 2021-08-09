@@ -138,17 +138,21 @@ const Carousel1 = () => {
 			// 	</div>
 
 
+
+
+      
+
 <div>
 <h1>Farmer's Friend</h1>
 
-<p>If we grow more food, there will be enough food to feed everyone</p>
+<p>if we grow more food, there will be enough food to feed everyone</p>
     <div div className="carousel"> 
 <section id= "slider" className="carousel-slider">
 
   
-  <input type= "radio" name="slider1" id= "slide-1-radio" checked />
-  <input type= "radio" name="slider2" id= "slide-2-radio" />
-  <input type= "radio" name="slider3" id= "slide-3-radio" />
+  <input type= "radio" name="slider" id= "slide-1-radio" checked />
+  <input type= "radio"  name="slider" id= "slide-2-radio" />
+  <input type= "radio" name="slider" id= "slide-3-radio" />
   
   <div className= "slides">
     <div className= "slide">
@@ -216,7 +220,6 @@ arrow_right_alt
 </section>
 </div>
 // </div>
-
 
 
       

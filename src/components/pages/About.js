@@ -6,7 +6,8 @@ import Card from "./Card";
 const About = () => {
   return (
     <div>
-      {/* <Carousel /> */}
+      <Card/>
+      <br/>
       <div className="wrapper">
         <div>
         <i className="material-icons brand-icon" data-testid="testcase" >agriculture</i> 

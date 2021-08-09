@@ -45,12 +45,13 @@ const Helplines = () => {
 
   return (
     <div>
+      <br/>
       <Card />
 
       <section></section>
       <div className="about-para">
         <br />
-        <h1>Wanna help...Please Call Us 😊😊</h1>
+        <h1>Available Helplines 😊😊</h1>
         <br></br>
 
         <h5 data-testid="testcase" className="about-para__help">
