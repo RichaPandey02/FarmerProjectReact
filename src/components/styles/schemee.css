@@ -19,3 +19,7 @@ h1 {
 .grid-cell-centered {
   text-align: center;
 }
+
+.ag-header-cell-label{
+  justify-content: center;
+}

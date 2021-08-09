@@ -30,6 +30,7 @@ const Schemes = () => {
       headerName: "TITLE",
       field: "title",
       editable: true,
+      className:"ag-header-cell-label"
     },
     {
       headerName: "STATE",
