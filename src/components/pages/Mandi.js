@@ -90,10 +90,10 @@ const Mandi = () => {
 
   return (
     <div>
-      <br/>
+      
       <Card />
       <br />
-      <h1> Currently Available Mandi's</h1>
+      <h1 data-testid="testcase"> Currently Available Mandi's</h1>
       <br />
       <div
         className="ag-theme-alpine manage-table

@@ -178,7 +178,7 @@ const Contact = () => {
 
   return (
     <div>
-      <br/>
+     
       <Card />
       <br></br>
       <div className="contact-form col-sm-10">

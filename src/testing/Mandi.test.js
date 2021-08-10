@@ -1,4 +1,4 @@
-import Helplines from "../components/pages/Helplines";
+import Mandi from "../components/pages/Mandi";
 import { render, screen, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import renderer from "react-test-renderer";
@@ -21,10 +21,10 @@ test("to check whether carausel component rendered", () => {
   );
 });  
 
-test("to check whether Helplines component rendered", () => {
+test("to check whether Mandi component rendered", () => {
   render(
     <BrowserRouter>
-      <Helplines />
+      <Mandi />
     </BrowserRouter>
   );
 });
@@ -38,17 +38,17 @@ it("the background should be", () => {
   expect(background).toEqual("transparent");
 });
 test("should render the paragraph ", () => {
-  render(<Helplines />);
-  const element = screen.getByTestId("helpline__testcase");
+  render(<Mandi />);
+  const element = screen.getByTestId("testcase");
   expect(element).toBeInTheDocument();
   expect(element).not.toContainHTML("<h5>");
 });
 
 test("should render the Heading ", () => {
-  render(<Helplines />);
-  const element = screen.getByTestId("helpline");
+  render(<Mandi />);
+  const element = screen.getByTestId("testcase");
   expect(element).toBeInTheDocument();
-  expect(element).toHaveTextContent("Available Helplines 😊😊");
+  expect(element).toHaveTextContent("Currently Available Mandi's");
 });
 it("to be equal to 1", () => {
   const num = 1;

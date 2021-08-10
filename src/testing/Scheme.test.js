@@ -2,6 +2,9 @@ import Schemes from "../components/pages/Schemes";
 import {render,screen,cleanup} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer'
+import Carousel from "../components/layout/Carousel"
+import Footer from '../components/layout/Footer'
+import { BrowserRouter } from "react-router-dom";
 
 
 it("demo testing",()=>{
@@ -20,17 +23,22 @@ test('should render Schemes component',()=>{
      expect(element).toBeInTheDocument();
     
 })
-// test('should render the paragraph ',()=>{
-//     render(<Schemes/>);
-//     const element=screen.getByTestId('testcase-1');
-//      expect(element).toBeInTheDocument();
-//      expect(element).toHaveTextContent('Contemporary agriculture');
-//      expect(element).not.toContainHTML('<p>')
-// })
-// test('matches snapshot',()=>{
-//     const tree=renderer.create(<Schemes/>).toJSON();
-//     console.log(tree);
-// })
+it("the background color should be #192a56", () => {
+    const color = "#192a56";
+    expect(color).toEqual("#192a56");
+  });
+  it("the background should be", () => {
+    const background = "transparent";
+    expect(background).toEqual("transparent");
+  });
+test("to check whether carausel component rendered", () => {
+    render(
+      <BrowserRouter>
+          <Carousel />
+      </BrowserRouter>
+    );
+  });  
+
 
 it("to be equal to 1",()=>{
     const num=1;
@@ -42,6 +50,13 @@ it("to be equal to 1",()=>{
   })
 
  
+  test("to check whether Footer component rendered", () => {
+    render(
+      <BrowserRouter>
+          <Footer />
+      </BrowserRouter>
+    );
+  });  
   
  
   

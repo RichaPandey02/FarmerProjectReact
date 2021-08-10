@@ -4,11 +4,11 @@ const Footerpage = () => {
   return (
     <body className="footer" id="footer">
     <div className="footer__listitem">
-      <h5 className="footer__listitem--heading">Get In touch</h5>
-      <p className="footer__listitem--heading">Farmers Friend 👩‍👩‍👧</p>
-      <p className="footer__listitem--heading">Kanpur, Uttar Pradesh</p>
-      <p className="footer__listitem--heading">8957907453</p>
-      <p className="footer__listitem--heading" id="mail">richapandey0297@gmail.com</p>
+      <h5 className="footer__listitem--heading" data-testid="getintouch">Get In touch</h5>
+      <p className="footer__listitem--heading" data-testid="farmersfriend">Farmers Friend 👩‍👩‍👧</p>
+      <p className="footer__listitem--heading" data-testid="Kanpur">Kanpur, Uttar Pradesh</p>
+      <p className="footer__listitem--heading" data-testid="phone">8957907453</p>
+      <p className="footer__listitem--heading"  data-testid="email" id="mail">richapandey0297@gmail.com</p>
     </div>
     </body>
 
