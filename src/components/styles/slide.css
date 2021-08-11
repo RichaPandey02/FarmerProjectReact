@@ -1,9 +1,10 @@
-.proj_images-images{
+/* FlexCard css */
+.proj_images-images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.proj_images__disp1{
+.proj_images__disp1 {
   width: 350px;
   height: 220px;
   padding: 10px 10px;

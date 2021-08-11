@@ -1,11 +1,11 @@
+//Important Address Page code..
 import React from "react";
-import "./Aggrid.css";
+import Aggrid from "../styles/Aggrid.css";
 import axios from "axios";
 import Imp from "../styles/Imp.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-
 import Card from "./Card";
 import Footer from "../layout/Footer";
 const ImportantAddress = () => {
@@ -96,7 +96,6 @@ const ImportantAddress = () => {
 
   return (
     <div>
-     
       <Card />
       <br />
       <h1>Soil Testing Labs</h1>

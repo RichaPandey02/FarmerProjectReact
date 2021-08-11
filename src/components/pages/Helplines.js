@@ -1,11 +1,16 @@
+//helpline page ....
+
 import React from "react";
 import help from "../styles/help.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Card from "./Card";
-import "./Aggrid.css";
+import Aggrid from "../styles/Aggrid.css";
 import Footer from "../layout/Footer";
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+configure({ adapter: new Adapter() });
 
 const Helplines = () => {
   const rowStyle = {
@@ -45,7 +50,6 @@ const Helplines = () => {
 
   return (
     <div>
- 
       <Card />
 
       <section></section>

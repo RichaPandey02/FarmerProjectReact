@@ -1,3 +1,4 @@
+/* Scheme page css */
 .delete-Schemes {
   background-color: #ff3838;
   width: 80px;
@@ -5,7 +6,7 @@
 }
 
 h1 {
-  color: #EA2027;
+  color: #ea2027;
   text-align: center;
 }
 
@@ -20,6 +21,6 @@ h1 {
   text-align: center;
 }
 
-.ag-header-cell-label{
+.ag-header-cell-label {
   justify-content: center;
 }

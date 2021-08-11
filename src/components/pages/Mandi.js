@@ -1,10 +1,10 @@
+//Mandi page code...
 import React from "react";
 import { AgGridReact } from "ag-grid-react";
-
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import axios from "axios";
-import "./Aggrid.css";
+import Aggrid from "../styles/Aggrid.css";
 import Card from "./Card";
 import Mandii from "../styles/Mandii.css";
 import Footer from "../layout/Footer";
@@ -90,7 +90,6 @@ const Mandi = () => {
 
   return (
     <div>
-      
       <Card />
       <br />
       <h1 data-testid="testcase"> Currently Available Mandi's</h1>

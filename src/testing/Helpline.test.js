@@ -5,11 +5,29 @@ import renderer from "react-test-renderer";
 import Carousel from "../components/layout/Carousel"
 import { BrowserRouter } from "react-router-dom";
 import Footer from '../components/layout/Footer'
+import {shallow} from 'enzyme';
 
 afterEach(() => {
   cleanup();
 });
 
+describe('shallow Helplines Page',()=>{
+  it('render the class',()=>{
+    let wrapper=shallow(<Helplines/>)
+    console.log(wrapper.debug())
+    expect(wrapper.exists('.about-para')).toEqual(true)
+})
+it('render the class name for paragarph',()=>{
+  let wrapper=shallow(<Helplines/>)
+  console.log(wrapper.debug())
+  expect(wrapper.exists('.about-para__help')).toEqual(true)
+})
+it('render the class name for Aggrid',()=>{
+  let wrapper=shallow(<Helplines/>)
+  console.log(wrapper.debug())
+  expect(wrapper.exists('.ag-theme-alpine')).toEqual(true)
+})
+})
 it("demo testing", () => {
   expect(true).toBe(true);
 });

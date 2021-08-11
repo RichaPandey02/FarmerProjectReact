@@ -5,6 +5,18 @@ import renderer from "react-test-renderer";
 import Carousel from "../components/layout/Carousel"
 import { BrowserRouter } from "react-router-dom";
 import Footer from '../components/layout/Footer'
+import {configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+import {shallow} from 'enzyme';
+configure({adapter:new Adapter()});
+describe('shallow Mandi Page',()=>{
+    it('render the class name for aggrid',()=>{
+        let wrapper=shallow(<Mandi/>)
+        console.log(wrapper.debug())
+        expect(wrapper.exists('.ag-theme-alpine')).toEqual(true)
+    })
+  })
 
 afterEach(() => {
   cleanup();

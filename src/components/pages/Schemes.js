@@ -1,11 +1,10 @@
 import React from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-import "./Aggrid.css";
+import Aggrid from "../styles/Aggrid.css";
 import schemee from "../styles/schemee.css";
 import Footer from "../layout/Footer";
 import Card from "./Card";
@@ -30,7 +29,7 @@ const Schemes = () => {
       headerName: "TITLE",
       field: "title",
       editable: true,
-      className:"ag-header-cell-label"
+      className: "ag-header-cell-label",
     },
     {
       headerName: "STATE",
@@ -91,8 +90,6 @@ const Schemes = () => {
       remove: [resp.node.data],
     });
     axios.delete(`http://localhost:3000/api/scheme/${id}`, resp.data);
-
-    //  alert("your data has been deleted");
   };
 
   const onExportClick = () => {
@@ -102,7 +99,6 @@ const Schemes = () => {
   return (
     <div>
       <div>
-     
         <Card />
 
         <section>
