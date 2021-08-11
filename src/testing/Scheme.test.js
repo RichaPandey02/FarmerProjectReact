@@ -5,7 +5,10 @@ import renderer from 'react-test-renderer'
 import Carousel from "../components/layout/Carousel"
 import Footer from '../components/layout/Footer'
 import { BrowserRouter } from "react-router-dom";
-
+import {shallow,mount} from 'enzyme';
+import {configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({adapter:new Adapter()});
 
 it("demo testing",()=>{
     expect(true).toBe(true);
@@ -57,6 +60,12 @@ it("to be equal to 1",()=>{
       </BrowserRouter>
     );
   });  
-  
- 
+  describe('snapshot2',()=>{
+    it('snapshot for scheme',()=>{
+      let wrapper=shallow(<Schemes/>)
+      console.log(wrapper.debug())
+      expect(wrapper.exists('.export-btn')).toEqual(true)
+    })
+    
+  })
   

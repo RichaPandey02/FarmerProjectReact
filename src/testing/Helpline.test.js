@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 import Carousel from "../components/layout/Carousel"
 import { BrowserRouter } from "react-router-dom";
 import Footer from '../components/layout/Footer'
-import {shallow} from 'enzyme';
+import {shallow,mount} from 'enzyme';
 
 afterEach(() => {
   cleanup();
@@ -18,6 +18,11 @@ describe('shallow Helplines Page',()=>{
     expect(wrapper.exists('.about-para')).toEqual(true)
 })
 it('render the class name for paragarph',()=>{
+  let wrapper=shallow(<Helplines/>)
+  console.log(wrapper.debug())
+  expect(wrapper).toMatchSnapshot();
+})
+it('snapshot for helpline',()=>{
   let wrapper=shallow(<Helplines/>)
   console.log(wrapper.debug())
   expect(wrapper.exists('.about-para__help')).toEqual(true)
@@ -33,9 +38,9 @@ it("demo testing", () => {
 });
 test("to check whether carausel component rendered", () => {
   render(
-    <BrowserRouter>
+    
         <Carousel />
-    </BrowserRouter>
+
   );
 });  
 
@@ -82,6 +87,14 @@ test("to check whether Footer component rendered", () => {
   render(
     <BrowserRouter>
         <Footer />
-    </BrowserRouter>
+        </BrowserRouter>
+    
   );
 });  
+
+describe('Mount vs Shallow',()=>{
+  it('snapshot 3',()=>{
+    let wrapper=mount(<Helplines/>)
+    console.log(wrapper.debug());
+  })
+})

@@ -19,11 +19,24 @@
   margin-right: 10px;
 }
 .footer__listitem--heading {
-  padding: 40px;
+  padding: 15px;
 }
 #mail {
   text-transform: lowercase;
 }
 .footer__listitem--heading {
   color: white;
+}
+
+@media only screen and (max-width: 360px) {
+  .footer__listitem--heading {
+   padding: 6px;
+  
+  }
+}
+@media only screen and (max-width: 375px) {
+  .footer__listitem--heading {
+   padding: 2px;
+  
+  }
 }
