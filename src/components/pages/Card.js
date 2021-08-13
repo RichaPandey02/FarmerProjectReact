@@ -4,7 +4,9 @@ import slide from "../styles/slide.css";
 
 const Slider = () => {
   return (
+    
     <body>
+       {/* <br/><br/><br/><br></br> */}
       <div class="proj_images">
         <div class="proj_images-images">
           <img
